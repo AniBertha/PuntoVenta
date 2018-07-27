@@ -8,7 +8,7 @@ namespace PuntoDeVenta
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Punto de entrada principal para la aplicación. es olo una prueba
         /// </summary>
         [STAThread]
         static void Main()

@@ -18,11 +18,18 @@ namespace PuntoDeVenta
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            FormLogin frmLogin = new FormLogin();
+            MenuLateral frmLogin = new MenuLateral();
             frmLogin.TopLevel = false;
             frmLogin.Parent = panel1;
             frmLogin.Show();
             frmLogin.BringToFront();
+
+
+            AgregarUsuario agregarUsuario = new AgregarUsuario();
+            agregarUsuario.TopLevel = false;
+            agregarUsuario.Parent = panel2;
+            agregarUsuario.Show();
+            agregarUsuario.BringToFront();
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -51,12 +52,20 @@
             this.panel1.Size = new System.Drawing.Size(200, 615);
             this.panel1.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(206, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(773, 193);
+            this.panel2.TabIndex = 2;
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -73,5 +82,6 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

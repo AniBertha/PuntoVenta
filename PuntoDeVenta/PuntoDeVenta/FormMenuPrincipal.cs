@@ -15,7 +15,7 @@ namespace PuntoDeVenta
         {
             InitializeComponent();
         }
-        //Sigo probando
+
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
 

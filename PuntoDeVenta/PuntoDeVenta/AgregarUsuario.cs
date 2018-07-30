@@ -14,6 +14,7 @@ namespace PuntoDeVenta
         public AgregarUsuario()
         {
             InitializeComponent();
+            //commit mara
         }
     }
 }

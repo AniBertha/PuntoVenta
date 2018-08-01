@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WS/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServidorWeb" targetNamespace="http://WS/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSPuntodeventa/ServidorWeb?xsd=1" namespace="http://WS/" />
+    </xsd:schema>
+  </types>
+  <message name="buscarLogin">
+    <part name="parameters" element="tns:buscarLogin" />
+  </message>
+  <message name="buscarLoginResponse">
+    <part name="parameters" element="tns:buscarLoginResponse" />
+  </message>
+  <message name="getDatarLogin">
+    <part name="parameters" element="tns:getDatarLogin" />
+  </message>
+  <message name="getDatarLoginResponse">
+    <part name="parameters" element="tns:getDatarLoginResponse" />
+  </message>
+  <message name="altaUsuario">
+    <part name="parameters" element="tns:altaUsuario" />
+  </message>
+  <message name="altaUsuarioResponse">
+    <part name="parameters" element="tns:altaUsuarioResponse" />
+  </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </message>
+  <message name="cargarUsuario">
+    <part name="parameters" element="tns:cargarUsuario" />
+  </message>
+  <message name="cargarUsuarioResponse">
+    <part name="parameters" element="tns:cargarUsuarioResponse" />
+  </message>
+  <message name="bajaUsuario">
+    <part name="parameters" element="tns:bajaUsuario" />
+  </message>
+  <message name="bajaUsuarioResponse">
+    <part name="parameters" element="tns:bajaUsuarioResponse" />
+  </message>
+  <message name="getDataUsuarios">
+    <part name="parameters" element="tns:getDataUsuarios" />
+  </message>
+  <message name="getDataUsuariosResponse">
+    <part name="parameters" element="tns:getDataUsuariosResponse" />
+  </message>
+  <message name="getDatarUsuarios">
+    <part name="parameters" element="tns:getDatarUsuarios" />
+  </message>
+  <message name="getDatarUsuariosResponse">
+    <part name="parameters" element="tns:getDatarUsuariosResponse" />
+  </message>
+  <portType name="ServidorWeb">
+    <operation name="buscarLogin">
+      <input wsam:Action="http://WS/ServidorWeb/buscarLoginRequest" message="tns:buscarLogin" />
+      <output wsam:Action="http://WS/ServidorWeb/buscarLoginResponse" message="tns:buscarLoginResponse" />
+    </operation>
+    <operation name="getDatarLogin">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarLoginRequest" message="tns:getDatarLogin" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarLoginResponse" message="tns:getDatarLoginResponse" />
+    </operation>
+    <operation name="altaUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/altaUsuarioRequest" message="tns:altaUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/altaUsuarioResponse" message="tns:altaUsuarioResponse" />
+    </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+    </operation>
+    <operation name="cargarUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/cargarUsuarioRequest" message="tns:cargarUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/cargarUsuarioResponse" message="tns:cargarUsuarioResponse" />
+    </operation>
+    <operation name="bajaUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/bajaUsuarioRequest" message="tns:bajaUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/bajaUsuarioResponse" message="tns:bajaUsuarioResponse" />
+    </operation>
+    <operation name="getDataUsuarios">
+      <input wsam:Action="http://WS/ServidorWeb/getDataUsuariosRequest" message="tns:getDataUsuarios" />
+      <output wsam:Action="http://WS/ServidorWeb/getDataUsuariosResponse" message="tns:getDataUsuariosResponse" />
+    </operation>
+    <operation name="getDatarUsuarios">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarUsuariosRequest" message="tns:getDatarUsuarios" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarUsuariosResponse" message="tns:getDatarUsuariosResponse" />
+    </operation>
+  </portType>
+  <binding name="ServidorWebPortBinding" type="tns:ServidorWeb">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="altaUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="bajaUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDataUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServidorWeb">
+    <port name="ServidorWebPort" binding="tns:ServidorWebPortBinding">
+      <soap:address location="http://localhost:8080/WSPuntodeventa/ServidorWeb" />
+    </port>
+  </service>
+</definitions>

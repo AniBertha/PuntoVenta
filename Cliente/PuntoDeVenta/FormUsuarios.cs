@@ -19,6 +19,7 @@ namespace PuntoDeVenta
       
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
+            //fgdf
             FormLateral frmLat = new FormLateral();
             frmLat.TopLevel = false;
             frmLat.Parent = panel1;

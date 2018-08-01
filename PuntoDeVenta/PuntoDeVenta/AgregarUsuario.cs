@@ -15,6 +15,7 @@ namespace PuntoDeVenta
         {
             InitializeComponent();
             //commit mara
+            //Commit de vite :v
         }
     }
 }

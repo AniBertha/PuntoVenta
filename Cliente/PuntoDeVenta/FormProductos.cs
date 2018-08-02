@@ -62,8 +62,8 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.altaUsuario(data2);
-                    MessageBox.Show("Usuario Insertado! :)");
+                    client.altaProducto(data2);
+                    MessageBox.Show("Producto Insertado! :)");
                     data = "";
                     data2 = "[";
                 }
@@ -89,7 +89,7 @@ namespace PuntoDeVenta
             json.stock = Convert.ToInt16(txtCantidad.Text);
             json.medida = cbUnidad.SelectedIndex;
             json.departamento = cbDepartamento.SelectedIndex;
-            json.idUsuario = Convert.ToInt16(txtID.Text);
+            json.idProducto = Convert.ToInt16(txtID.Text);
             data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
             data2 += data;
 
@@ -97,8 +97,8 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.actualizarUsuario(data2);
-                    MessageBox.Show("Usuario modificado correctamente.");
+                    client.actualizarProducto(data2);
+                    MessageBox.Show("Producto modificado correctamente.");
                     data = "";
                     data2 = "[";
                 }

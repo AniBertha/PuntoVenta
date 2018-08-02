@@ -64,7 +64,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.actualizarUsuario(data2);
+                    client.actualizarProveedor(data2);
                     MessageBox.Show("Proveedor modificado correctamente.");
                     data = "";
                     data2 = "[";

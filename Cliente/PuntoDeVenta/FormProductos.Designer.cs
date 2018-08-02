@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.textPC = new System.Windows.Forms.TextBox();
             this.textPV = new System.Windows.Forms.TextBox();
             this.textCaducidad = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
-            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,17 @@
             this.gbDatos.TabIndex = 7;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de producto";
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Items.AddRange(new object[] {
+            "Usuario",
+            "Administrador"});
+            this.cbDepartamento.Location = new System.Drawing.Point(176, 157);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(205, 24);
+            this.cbDepartamento.TabIndex = 26;
             // 
             // textPC
             // 
@@ -272,7 +284,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(722, 28);
+            this.btnGuardar.Location = new System.Drawing.Point(725, 63);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(74, 77);
             this.btnGuardar.TabIndex = 11;
@@ -289,7 +301,7 @@
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnActualizar.Location = new System.Drawing.Point(519, 27);
+            this.btnActualizar.Location = new System.Drawing.Point(518, 62);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(85, 77);
             this.btnActualizar.TabIndex = 10;
@@ -305,7 +317,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(622, 28);
+            this.btnEliminar.Location = new System.Drawing.Point(622, 62);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 77);
             this.btnEliminar.TabIndex = 9;
@@ -321,7 +333,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(416, 27);
+            this.btnAgregar.Location = new System.Drawing.Point(413, 63);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(85, 77);
             this.btnAgregar.TabIndex = 8;
@@ -332,7 +344,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 615);
             this.panel1.TabIndex = 12;
@@ -345,22 +357,24 @@
             this.dataGridProductos.Size = new System.Drawing.Size(740, 250);
             this.dataGridProductos.TabIndex = 13;
             // 
-            // cbDepartamento
+            // lblTitle
             // 
-            this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
-            this.cbDepartamento.Location = new System.Drawing.Point(176, 157);
-            this.cbDepartamento.Name = "cbDepartamento";
-            this.cbDepartamento.Size = new System.Drawing.Size(205, 24);
-            this.cbDepartamento.TabIndex = 26;
+            this.lblTitle.BackColor = System.Drawing.Color.SlateGray;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.YellowGreen;
+            this.lblTitle.Location = new System.Drawing.Point(-3, -1);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1000, 50);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "PRODUCTOS";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.dataGridProductos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardar);
@@ -369,7 +383,6 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbDatos);
             this.Name = "FormProductos";
-            this.Text = "Productos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
@@ -407,5 +420,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridProductos;
         private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

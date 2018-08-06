@@ -31,7 +31,7 @@ namespace PuntoDeVenta
                 {
                     DataTable dt = (DataTable)JsonConvert.DeserializeObject(client.cargarUsuario(), typeof(DataTable));
 
-                    dataGridProductos.DataSource = dt;
+                    dgvTabla.DataSource = dt;
                 }
                 catch
                 {
@@ -55,6 +55,7 @@ namespace PuntoDeVenta
             json.stock = Convert.ToInt16(txtCantidad.Text);
             json.medida = cbUnidad.SelectedIndex;
             json.departamento = cbDepartamento.SelectedIndex;
+            json.provedor= cbProvedor.SelectedIndex;
             data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
             data2 += data;
             txtID.Text = data2;
@@ -89,6 +90,7 @@ namespace PuntoDeVenta
             json.stock = Convert.ToInt16(txtCantidad.Text);
             json.medida = cbUnidad.SelectedIndex;
             json.departamento = cbDepartamento.SelectedIndex;
+            json.provedor = cbProvedor.SelectedIndex;
             json.idProducto = Convert.ToInt16(txtID.Text);
             data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
             data2 += data;
@@ -133,6 +135,41 @@ namespace PuntoDeVenta
 
                 }
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Producto json = new Producto();
+            json.nombre = txtNombre.Text;
+            json.marca = txtMarca.Text;
+
+            json.descripcion = txtDescripcion.Text;
+            json.precioVenta = textPV.Text;
+            json.precioCompra = textPC.Text;
+            json.caducidad = textCaducidad.Text;
+            json.stock = Convert.ToInt16(txtCantidad.Text);
+            json.medida = cbUnidad.SelectedIndex;
+            json.departamento = cbDepartamento.SelectedIndex;
+            json.provedor = cbProvedor.SelectedIndex;
+            json.idProducto = Convert.ToInt16(txtID.Text);
+            data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
+            data2 += data;
+
+            using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
+            {
+                try
+                {
+                    client.buscarProducto(data2);
+                    MessageBox.Show("Resultados");
+                    data = "";
+                    data2 = "[";
+                }
+                catch
+                {
+                    MessageBox.Show("No sirvio :(");
+                }
+            }
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

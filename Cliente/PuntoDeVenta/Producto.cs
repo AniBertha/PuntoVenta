@@ -17,6 +17,7 @@ namespace PuntoDeVenta
         public int stock { get; set; }
         public int medida { get; set; }
         public int departamento { get; set; }
+        public int provedor { get; set; }
         public int idProducto { get; set; }
     }
 }

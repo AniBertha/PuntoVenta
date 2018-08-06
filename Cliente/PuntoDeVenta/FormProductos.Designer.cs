@@ -55,14 +55,23 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridProductos = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.dgvTabla = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbProvedor = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
+            this.gbBusqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.cbProvedor);
+            this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.cbDepartamento);
             this.gbDatos.Controls.Add(this.textPC);
             this.gbDatos.Controls.Add(this.textPV);
@@ -86,7 +95,7 @@
             this.gbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.Location = new System.Drawing.Point(222, 146);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(740, 194);
+            this.gbDatos.Size = new System.Drawing.Size(740, 228);
             this.gbDatos.TabIndex = 7;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de producto";
@@ -349,14 +358,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 615);
             this.panel1.TabIndex = 12;
             // 
-            // dataGridProductos
-            // 
-            this.dataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProductos.Location = new System.Drawing.Point(222, 365);
-            this.dataGridProductos.Name = "dataGridProductos";
-            this.dataGridProductos.Size = new System.Drawing.Size(740, 250);
-            this.dataGridProductos.TabIndex = 13;
-            // 
             // lblTitle
             // 
             this.lblTitle.BackColor = System.Drawing.Color.SlateGray;
@@ -369,13 +370,90 @@
             this.lblTitle.Text = "PRODUCTOS";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gbBusqueda
+            // 
+            this.gbBusqueda.Controls.Add(this.dgvTabla);
+            this.gbBusqueda.Controls.Add(this.btnBuscar);
+            this.gbBusqueda.Controls.Add(this.txtProducto);
+            this.gbBusqueda.Controls.Add(this.label9);
+            this.gbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBusqueda.Location = new System.Drawing.Point(222, 380);
+            this.gbBusqueda.Name = "gbBusqueda";
+            this.gbBusqueda.Size = new System.Drawing.Size(740, 269);
+            this.gbBusqueda.TabIndex = 17;
+            this.gbBusqueda.TabStop = false;
+            this.gbBusqueda.Text = "Búsqueda Producto";
+            // 
+            // dgvTabla
+            // 
+            this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabla.Location = new System.Drawing.Point(9, 84);
+            this.dgvTabla.Name = "dgvTabla";
+            this.dgvTabla.Size = new System.Drawing.Size(722, 179);
+            this.dgvTabla.TabIndex = 18;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(625, 11);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(106, 58);
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(162, 48);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(443, 21);
+            this.txtProducto.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Ingrese la búsqueda:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Provedor:";
+            // 
+            // cbProvedor
+            // 
+            this.cbProvedor.FormattingEnabled = true;
+            this.cbProvedor.Items.AddRange(new object[] {
+            "Usuario",
+            "Administrador"});
+            this.cbProvedor.Location = new System.Drawing.Point(176, 194);
+            this.cbProvedor.Name = "cbProvedor";
+            this.cbProvedor.Size = new System.Drawing.Size(205, 24);
+            this.cbProvedor.TabIndex = 28;
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.dataGridProductos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnActualizar);
@@ -386,7 +464,9 @@
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).EndInit();
+            this.gbBusqueda.ResumeLayout(false);
+            this.gbBusqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,8 +498,14 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridProductos;
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.GroupBox gbBusqueda;
+        private System.Windows.Forms.DataGridView dgvTabla;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbProvedor;
+        private System.Windows.Forms.Label label1;
     }
 }

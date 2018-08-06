@@ -45,8 +45,6 @@
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.dgvTabla = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.cbxCriterio = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -161,7 +159,7 @@
             this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.Location = new System.Drawing.Point(175, 51);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(147, 22);
+            this.txtRazonSocial.Size = new System.Drawing.Size(170, 22);
             this.txtRazonSocial.TabIndex = 3;
             // 
             // lblRazonSocial
@@ -196,8 +194,6 @@
             // 
             this.gbBusqueda.Controls.Add(this.dgvTabla);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
-            this.gbBusqueda.Controls.Add(this.cbxCriterio);
-            this.gbBusqueda.Controls.Add(this.label8);
             this.gbBusqueda.Controls.Add(this.txtBusqueda);
             this.gbBusqueda.Controls.Add(this.label9);
             this.gbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,33 +227,12 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // cbxCriterio
-            // 
-            this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Items.AddRange(new object[] {
-            "ID",
-            "Nombre"});
-            this.cbxCriterio.Location = new System.Drawing.Point(492, 30);
-            this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(121, 24);
-            this.cbxCriterio.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(433, 33);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Criterio:";
-            // 
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(166, 30);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(243, 21);
+            this.txtBusqueda.Size = new System.Drawing.Size(402, 21);
             this.txtBusqueda.TabIndex = 1;
             // 
             // label9
@@ -412,12 +387,10 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.GroupBox gbBusqueda;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgvTabla;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ComboBox cbxCriterio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTituloProvedores;
         private System.Windows.Forms.Panel panel6;

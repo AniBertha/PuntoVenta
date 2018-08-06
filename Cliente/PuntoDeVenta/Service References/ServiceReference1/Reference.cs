@@ -15,6 +15,14 @@ namespace PuntoDeVenta.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://WS/", ConfigurationName="ServiceReference1.ServidorWeb")]
     public interface ServidorWeb {
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento json del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/actualizarUsuarioRequest", ReplyAction="http://WS/ServidorWeb/actualizarUsuarioResponse")]
+        PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse actualizarUsuario(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento json del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/altaUsuarioRequest", ReplyAction="http://WS/ServidorWeb/altaUsuarioResponse")]
+        PuntoDeVenta.ServiceReference1.altaUsuarioResponse altaUsuario(PuntoDeVenta.ServiceReference1.altaUsuarioRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento password del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/buscarLoginRequest", ReplyAction="http://WS/ServidorWeb/buscarLoginResponse")]
         PuntoDeVenta.ServiceReference1.buscarLoginResponse buscarLogin(PuntoDeVenta.ServiceReference1.buscarLoginRequest request);
@@ -23,13 +31,9 @@ namespace PuntoDeVenta.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/getDatarLoginRequest", ReplyAction="http://WS/ServidorWeb/getDatarLoginResponse")]
         PuntoDeVenta.ServiceReference1.getDatarLoginResponse getDatarLogin(PuntoDeVenta.ServiceReference1.getDatarLoginRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento json del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/altaUsuarioRequest", ReplyAction="http://WS/ServidorWeb/altaUsuarioResponse")]
-        PuntoDeVenta.ServiceReference1.altaUsuarioResponse altaUsuario(PuntoDeVenta.ServiceReference1.altaUsuarioRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento json del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/actualizarUsuarioRequest", ReplyAction="http://WS/ServidorWeb/actualizarUsuarioResponse")]
-        PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse actualizarUsuario(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest request);
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento arg0 del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/getDataProductosRequest", ReplyAction="http://WS/ServidorWeb/getDataProductosResponse")]
+        PuntoDeVenta.ServiceReference1.getDataProductosResponse getDataProductos(PuntoDeVenta.ServiceReference1.getDataProductosRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/cargarUsuarioRequest", ReplyAction="http://WS/ServidorWeb/cargarUsuarioResponse")]
@@ -46,6 +50,142 @@ namespace PuntoDeVenta.ServiceReference1 {
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento arg0 del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/getDatarUsuariosRequest", ReplyAction="http://WS/ServidorWeb/getDatarUsuariosResponse")]
         PuntoDeVenta.ServiceReference1.getDatarUsuariosResponse getDatarUsuarios(PuntoDeVenta.ServiceReference1.getDatarUsuariosRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class actualizarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="actualizarUsuario", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody Body;
+        
+        public actualizarUsuarioRequest() {
+        }
+        
+        public actualizarUsuarioRequest(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class actualizarUsuarioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string json;
+        
+        public actualizarUsuarioRequestBody() {
+        }
+        
+        public actualizarUsuarioRequestBody(string json) {
+            this.json = json;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class actualizarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="actualizarUsuarioResponse", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.actualizarUsuarioResponseBody Body;
+        
+        public actualizarUsuarioResponse() {
+        }
+        
+        public actualizarUsuarioResponse(PuntoDeVenta.ServiceReference1.actualizarUsuarioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class actualizarUsuarioResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public actualizarUsuarioResponseBody() {
+        }
+        
+        public actualizarUsuarioResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class altaUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="altaUsuario", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody Body;
+        
+        public altaUsuarioRequest() {
+        }
+        
+        public altaUsuarioRequest(PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class altaUsuarioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string json;
+        
+        public altaUsuarioRequestBody() {
+        }
+        
+        public altaUsuarioRequestBody(string json) {
+            this.json = json;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class altaUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="altaUsuarioResponse", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.altaUsuarioResponseBody Body;
+        
+        public altaUsuarioResponse() {
+        }
+        
+        public altaUsuarioResponse(PuntoDeVenta.ServiceReference1.altaUsuarioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class altaUsuarioResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public altaUsuarioResponseBody() {
+        }
+        
+        public altaUsuarioResponseBody(string @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -200,15 +340,15 @@ namespace PuntoDeVenta.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class altaUsuarioRequest {
+    public partial class getDataProductosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="altaUsuario", Namespace="http://WS/", Order=0)]
-        public PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDataProductos", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.getDataProductosRequestBody Body;
         
-        public altaUsuarioRequest() {
+        public getDataProductosRequest() {
         }
         
-        public altaUsuarioRequest(PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody Body) {
+        public getDataProductosRequest(PuntoDeVenta.ServiceReference1.getDataProductosRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -217,16 +357,20 @@ namespace PuntoDeVenta.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class altaUsuarioRequestBody {
+    public partial class getDataProductosRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string json;
+        public string arg0;
         
-        public altaUsuarioRequestBody() {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string arg1;
+        
+        public getDataProductosRequestBody() {
         }
         
-        public altaUsuarioRequestBody(string json) {
-            this.json = json;
+        public getDataProductosRequestBody(string arg0, string arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
         }
     }
     
@@ -234,15 +378,15 @@ namespace PuntoDeVenta.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class altaUsuarioResponse {
+    public partial class getDataProductosResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="altaUsuarioResponse", Namespace="http://WS/", Order=0)]
-        public PuntoDeVenta.ServiceReference1.altaUsuarioResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDataProductosResponse", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.getDataProductosResponseBody Body;
         
-        public altaUsuarioResponse() {
+        public getDataProductosResponse() {
         }
         
-        public altaUsuarioResponse(PuntoDeVenta.ServiceReference1.altaUsuarioResponseBody Body) {
+        public getDataProductosResponse(PuntoDeVenta.ServiceReference1.getDataProductosResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -251,83 +395,15 @@ namespace PuntoDeVenta.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class altaUsuarioResponseBody {
+    public partial class getDataProductosResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string @return;
         
-        public altaUsuarioResponseBody() {
+        public getDataProductosResponseBody() {
         }
         
-        public altaUsuarioResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class actualizarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="actualizarUsuario", Namespace="http://WS/", Order=0)]
-        public PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody Body;
-        
-        public actualizarUsuarioRequest() {
-        }
-        
-        public actualizarUsuarioRequest(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class actualizarUsuarioRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string json;
-        
-        public actualizarUsuarioRequestBody() {
-        }
-        
-        public actualizarUsuarioRequestBody(string json) {
-            this.json = json;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class actualizarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="actualizarUsuarioResponse", Namespace="http://WS/", Order=0)]
-        public PuntoDeVenta.ServiceReference1.actualizarUsuarioResponseBody Body;
-        
-        public actualizarUsuarioResponse() {
-        }
-        
-        public actualizarUsuarioResponse(PuntoDeVenta.ServiceReference1.actualizarUsuarioResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class actualizarUsuarioResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public actualizarUsuarioResponseBody() {
-        }
-        
-        public actualizarUsuarioResponseBody(string @return) {
+        public getDataProductosResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -633,6 +709,32 @@ namespace PuntoDeVenta.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse PuntoDeVenta.ServiceReference1.ServidorWeb.actualizarUsuario(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest request) {
+            return base.Channel.actualizarUsuario(request);
+        }
+        
+        public string actualizarUsuario(string json) {
+            PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest inValue = new PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest();
+            inValue.Body = new PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody();
+            inValue.Body.json = json;
+            PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).actualizarUsuario(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PuntoDeVenta.ServiceReference1.altaUsuarioResponse PuntoDeVenta.ServiceReference1.ServidorWeb.altaUsuario(PuntoDeVenta.ServiceReference1.altaUsuarioRequest request) {
+            return base.Channel.altaUsuario(request);
+        }
+        
+        public string altaUsuario(string json) {
+            PuntoDeVenta.ServiceReference1.altaUsuarioRequest inValue = new PuntoDeVenta.ServiceReference1.altaUsuarioRequest();
+            inValue.Body = new PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody();
+            inValue.Body.json = json;
+            PuntoDeVenta.ServiceReference1.altaUsuarioResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).altaUsuario(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         PuntoDeVenta.ServiceReference1.buscarLoginResponse PuntoDeVenta.ServiceReference1.ServidorWeb.buscarLogin(PuntoDeVenta.ServiceReference1.buscarLoginRequest request) {
             return base.Channel.buscarLogin(request);
         }
@@ -662,28 +764,16 @@ namespace PuntoDeVenta.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PuntoDeVenta.ServiceReference1.altaUsuarioResponse PuntoDeVenta.ServiceReference1.ServidorWeb.altaUsuario(PuntoDeVenta.ServiceReference1.altaUsuarioRequest request) {
-            return base.Channel.altaUsuario(request);
+        PuntoDeVenta.ServiceReference1.getDataProductosResponse PuntoDeVenta.ServiceReference1.ServidorWeb.getDataProductos(PuntoDeVenta.ServiceReference1.getDataProductosRequest request) {
+            return base.Channel.getDataProductos(request);
         }
         
-        public string altaUsuario(string json) {
-            PuntoDeVenta.ServiceReference1.altaUsuarioRequest inValue = new PuntoDeVenta.ServiceReference1.altaUsuarioRequest();
-            inValue.Body = new PuntoDeVenta.ServiceReference1.altaUsuarioRequestBody();
-            inValue.Body.json = json;
-            PuntoDeVenta.ServiceReference1.altaUsuarioResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).altaUsuario(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse PuntoDeVenta.ServiceReference1.ServidorWeb.actualizarUsuario(PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuario(request);
-        }
-        
-        public string actualizarUsuario(string json) {
-            PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest inValue = new PuntoDeVenta.ServiceReference1.actualizarUsuarioRequest();
-            inValue.Body = new PuntoDeVenta.ServiceReference1.actualizarUsuarioRequestBody();
-            inValue.Body.json = json;
-            PuntoDeVenta.ServiceReference1.actualizarUsuarioResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).actualizarUsuario(inValue);
+        public string getDataProductos(string arg0, string arg1) {
+            PuntoDeVenta.ServiceReference1.getDataProductosRequest inValue = new PuntoDeVenta.ServiceReference1.getDataProductosRequest();
+            inValue.Body = new PuntoDeVenta.ServiceReference1.getDataProductosRequestBody();
+            inValue.Body.arg0 = arg0;
+            inValue.Body.arg1 = arg1;
+            PuntoDeVenta.ServiceReference1.getDataProductosResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).getDataProductos(inValue);
             return retVal.Body.@return;
         }
         

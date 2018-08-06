@@ -98,6 +98,18 @@ namespace PuntoDeVenta
             }
         }
 
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtID.Text  = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtApellidos.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtNacimiento.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtDireccion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtTelefono.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtCorreo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtPassword.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Usuario json = new Usuario();

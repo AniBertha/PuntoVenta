@@ -62,7 +62,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.altaProducto(data2);
+                  //  client.altaProducto(data2);
                     MessageBox.Show("Producto Insertado! :)");
                     data = "";
                     data2 = "[";
@@ -97,7 +97,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.actualizarProducto(data2);
+            //        client.actualizarProducto(data2);
                     MessageBox.Show("Producto modificado correctamente.");
                     data = "";
                     data2 = "[";
@@ -121,7 +121,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.bajaUsuario(data2);
+         //           client.bajaUsuario(data2);
 
                     MessageBox.Show("¡Usuario eliminado! :)");
                     data = "";

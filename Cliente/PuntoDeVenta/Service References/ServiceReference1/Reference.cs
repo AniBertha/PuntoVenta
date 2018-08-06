@@ -50,6 +50,14 @@ namespace PuntoDeVenta.ServiceReference1 {
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento arg0 del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/getDatarUsuariosRequest", ReplyAction="http://WS/ServidorWeb/getDatarUsuariosResponse")]
         PuntoDeVenta.ServiceReference1.getDatarUsuariosResponse getDatarUsuarios(PuntoDeVenta.ServiceReference1.getDatarUsuariosRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento arg0 del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/getBuscarUsuariosRequest", ReplyAction="http://WS/ServidorWeb/getBuscarUsuariosResponse")]
+        PuntoDeVenta.ServiceReference1.getBuscarUsuariosResponse getBuscarUsuarios(PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://WS/ServidorWeb/buscarUsuarioRequest", ReplyAction="http://WS/ServidorWeb/buscarUsuarioResponse")]
+        PuntoDeVenta.ServiceReference1.buscarUsuarioResponse buscarUsuario(PuntoDeVenta.ServiceReference1.buscarUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -681,6 +689,146 @@ namespace PuntoDeVenta.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getBuscarUsuariosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getBuscarUsuarios", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequestBody Body;
+        
+        public getBuscarUsuariosRequest() {
+        }
+        
+        public getBuscarUsuariosRequest(PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getBuscarUsuariosRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string arg0;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string arg1;
+        
+        public getBuscarUsuariosRequestBody() {
+        }
+        
+        public getBuscarUsuariosRequestBody(string arg0, string arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getBuscarUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getBuscarUsuariosResponse", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.getBuscarUsuariosResponseBody Body;
+        
+        public getBuscarUsuariosResponse() {
+        }
+        
+        public getBuscarUsuariosResponse(PuntoDeVenta.ServiceReference1.getBuscarUsuariosResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getBuscarUsuariosResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getBuscarUsuariosResponseBody() {
+        }
+        
+        public getBuscarUsuariosResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class buscarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="buscarUsuario", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.buscarUsuarioRequestBody Body;
+        
+        public buscarUsuarioRequest() {
+        }
+        
+        public buscarUsuarioRequest(PuntoDeVenta.ServiceReference1.buscarUsuarioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class buscarUsuarioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string nombre;
+        
+        public buscarUsuarioRequestBody() {
+        }
+        
+        public buscarUsuarioRequestBody(string nombre) {
+            this.nombre = nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class buscarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="buscarUsuarioResponse", Namespace="http://WS/", Order=0)]
+        public PuntoDeVenta.ServiceReference1.buscarUsuarioResponseBody Body;
+        
+        public buscarUsuarioResponse() {
+        }
+        
+        public buscarUsuarioResponse(PuntoDeVenta.ServiceReference1.buscarUsuarioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class buscarUsuarioResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public buscarUsuarioResponseBody() {
+        }
+        
+        public buscarUsuarioResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServidorWebChannel : PuntoDeVenta.ServiceReference1.ServidorWeb, System.ServiceModel.IClientChannel {
     }
@@ -827,6 +975,33 @@ namespace PuntoDeVenta.ServiceReference1 {
             inValue.Body.arg0 = arg0;
             inValue.Body.arg1 = arg1;
             PuntoDeVenta.ServiceReference1.getDatarUsuariosResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).getDatarUsuarios(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PuntoDeVenta.ServiceReference1.getBuscarUsuariosResponse PuntoDeVenta.ServiceReference1.ServidorWeb.getBuscarUsuarios(PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequest request) {
+            return base.Channel.getBuscarUsuarios(request);
+        }
+        
+        public string getBuscarUsuarios(string arg0, string arg1) {
+            PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequest inValue = new PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequest();
+            inValue.Body = new PuntoDeVenta.ServiceReference1.getBuscarUsuariosRequestBody();
+            inValue.Body.arg0 = arg0;
+            inValue.Body.arg1 = arg1;
+            PuntoDeVenta.ServiceReference1.getBuscarUsuariosResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).getBuscarUsuarios(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PuntoDeVenta.ServiceReference1.buscarUsuarioResponse PuntoDeVenta.ServiceReference1.ServidorWeb.buscarUsuario(PuntoDeVenta.ServiceReference1.buscarUsuarioRequest request) {
+            return base.Channel.buscarUsuario(request);
+        }
+        
+        public string buscarUsuario(string nombre) {
+            PuntoDeVenta.ServiceReference1.buscarUsuarioRequest inValue = new PuntoDeVenta.ServiceReference1.buscarUsuarioRequest();
+            inValue.Body = new PuntoDeVenta.ServiceReference1.buscarUsuarioRequestBody();
+            inValue.Body.nombre = nombre;
+            PuntoDeVenta.ServiceReference1.buscarUsuarioResponse retVal = ((PuntoDeVenta.ServiceReference1.ServidorWeb)(this)).buscarUsuario(inValue);
             return retVal.Body.@return;
         }
     }

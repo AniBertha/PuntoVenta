@@ -8,8 +8,12 @@
   <xs:element name="bajaUsuarioResponse" type="tns:bajaUsuarioResponse" />
   <xs:element name="buscarLogin" type="tns:buscarLogin" />
   <xs:element name="buscarLoginResponse" type="tns:buscarLoginResponse" />
+  <xs:element name="buscarUsuario" type="tns:buscarUsuario" />
+  <xs:element name="buscarUsuarioResponse" type="tns:buscarUsuarioResponse" />
   <xs:element name="cargarUsuario" type="tns:cargarUsuario" />
   <xs:element name="cargarUsuarioResponse" type="tns:cargarUsuarioResponse" />
+  <xs:element name="getBuscarUsuarios" type="tns:getBuscarUsuarios" />
+  <xs:element name="getBuscarUsuariosResponse" type="tns:getBuscarUsuariosResponse" />
   <xs:element name="getDataProductos" type="tns:getDataProductos" />
   <xs:element name="getDataProductosResponse" type="tns:getDataProductosResponse" />
   <xs:element name="getDataUsuarios" type="tns:getDataUsuarios" />
@@ -81,6 +85,16 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="buscarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="getDatarLogin">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -108,6 +122,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getDataUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBuscarUsuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBuscarUsuariosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>

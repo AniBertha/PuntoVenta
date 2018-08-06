@@ -34,7 +34,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.altaProveedor(data2);
+        //            client.altaProveedor(data2);
                     MessageBox.Show("Proveedor Insertado! :)");
                     data = "";
                     data2 = "[";
@@ -64,7 +64,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.actualizarProveedor(data2);
+             //       client.actualizarProveedor(data2);
                     MessageBox.Show("Proveedor modificado correctamente.");
                     data = "";
                     data2 = "[";
@@ -88,7 +88,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    client.bajaProveedor(data2);
+                 //   client.bajaProveedor(data2);
 
                     MessageBox.Show("¡Proveedor eliminado! :)");
                     data = "";

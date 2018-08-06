@@ -10,12 +10,25 @@
   <xs:element name="buscarLoginResponse" type="tns:buscarLoginResponse" />
   <xs:element name="cargarUsuario" type="tns:cargarUsuario" />
   <xs:element name="cargarUsuarioResponse" type="tns:cargarUsuarioResponse" />
+  <xs:element name="getDataProductos" type="tns:getDataProductos" />
+  <xs:element name="getDataProductosResponse" type="tns:getDataProductosResponse" />
   <xs:element name="getDataUsuarios" type="tns:getDataUsuarios" />
   <xs:element name="getDataUsuariosResponse" type="tns:getDataUsuariosResponse" />
   <xs:element name="getDatarLogin" type="tns:getDatarLogin" />
   <xs:element name="getDatarLoginResponse" type="tns:getDatarLoginResponse" />
   <xs:element name="getDatarUsuarios" type="tns:getDatarUsuarios" />
   <xs:element name="getDatarUsuariosResponse" type="tns:getDatarUsuariosResponse" />
+  <xs:complexType name="getDataProductos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="altaUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="json" type="xs:string" />

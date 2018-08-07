@@ -35,7 +35,7 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                    DataTable dt = (DataTable)JsonConvert.DeserializeObject(client.cargarUsuario(), typeof(DataTable));
+                    DataTable dt = (DataTable)JsonConvert.DeserializeObject(client.cargarProducto(), typeof(DataTable));
 
                     dgvTabla.DataSource = dt;
                 }

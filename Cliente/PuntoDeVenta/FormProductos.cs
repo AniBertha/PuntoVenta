@@ -25,6 +25,12 @@ namespace PuntoDeVenta
             frmLat.Parent = panel1;
             frmLat.Show();
             frmLat.BringToFront();
+            ActualizarTabla();
+        }
+
+
+        public void ActualizarTabla()
+        {
             using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
             {
                 try
@@ -39,40 +45,56 @@ namespace PuntoDeVenta
                 }
             }
         }
-
         string data, data2 = "[";
+
+       
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Producto json = new Producto();
-            json.nombre = txtNombre.Text;
-            json.marca = txtMarca.Text;
-
-            json.descripcion = txtDescripcion.Text;
-            json.precioVenta= textPV.Text;
-            json.precioCompra = textPC.Text;
-            json.caducidad= textCaducidad.Text;
-            json.stock = Convert.ToInt16(txtCantidad.Text);
-            json.medida = cbUnidad.SelectedIndex;
-            json.departamento = cbDepartamento.SelectedIndex;
-            json.provedor= cbProvedor.SelectedIndex;
-            data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
-            data2 += data;
-            txtID.Text = data2;
-            using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
+            if (txtNombre.Text != "" && txtMarca.Text != "" && txtDescripcion.Text != "" && cbDepartamento.Text != "" && cbProvedor.Text != "" && textPC.Text != "" && textPV.Text != "" && textCaducidad.Text != "" && txtCantidad.Text != "" && cbUnidad.Text != "")
             {
-                try
+                if (MessageBox.Show("¿Esta seguro Agregar este este producto al sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                 {
-                  //  client.altaProducto(data2);
-                    MessageBox.Show("Producto Insertado! :)");
-                    data = "";
-                    data2 = "[";
-                }
-                catch
-                {
-                    MessageBox.Show("No sirvio :(");
+                    Producto json = new Producto();
+                    json.nombre = txtNombre.Text;
+                    json.marca = txtDescripcion.Text;
+
+                    json.descripcion= cbDepartamento.Text;
+                    json.precioVenta = cbProvedor.Text;
+                    json.precioCompra = textPC.Text;
+                    json.caducidad = textCaducidad.Text;
+                    json.stock = Convert.ToInt16(txtCantidad.Text);
+                    json.medida = cbUnidad.SelectedIndex;
+                    json.departamento = cbDepartamento.SelectedIndex;
+                    json.provedor = cbProvedor.SelectedIndex;
+                    json.idProducto = Convert.ToInt16(txtID.Text); 
+                    data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
+                    data2 += data;
+
+                    using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
+                    {
+                        try
+                        {
+                            client.altaUsuario(data2);
+                            MessageBox.Show("Usuario Insertado! :)");
+                            data = "";
+                            data2 = "[";
+                            ActualizarTabla();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No sirvio :(");
+                        }
+                    }
                 }
             }
+            else
+                MessageBox.Show("Por favor llena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
+
 
         }
 

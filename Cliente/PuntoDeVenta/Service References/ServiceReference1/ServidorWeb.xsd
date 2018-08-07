@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://WS/" targetNamespace="http://WS/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarProducto" type="tns:actualizarProducto" />
+  <xs:element name="actualizarProductoResponse" type="tns:actualizarProductoResponse" />
+  <xs:element name="actualizarProveedor" type="tns:actualizarProveedor" />
+  <xs:element name="actualizarProveedorResponse" type="tns:actualizarProveedorResponse" />
   <xs:element name="actualizarUsuario" type="tns:actualizarUsuario" />
   <xs:element name="actualizarUsuarioResponse" type="tns:actualizarUsuarioResponse" />
+  <xs:element name="altaProducto" type="tns:altaProducto" />
+  <xs:element name="altaProductoResponse" type="tns:altaProductoResponse" />
+  <xs:element name="altaProveedor" type="tns:altaProveedor" />
+  <xs:element name="altaProveedorResponse" type="tns:altaProveedorResponse" />
   <xs:element name="altaUsuario" type="tns:altaUsuario" />
   <xs:element name="altaUsuarioResponse" type="tns:altaUsuarioResponse" />
+  <xs:element name="bajaProducto" type="tns:bajaProducto" />
+  <xs:element name="bajaProductoResponse" type="tns:bajaProductoResponse" />
+  <xs:element name="bajaProveedor" type="tns:bajaProveedor" />
+  <xs:element name="bajaProveedorResponse" type="tns:bajaProveedorResponse" />
   <xs:element name="bajaUsuario" type="tns:bajaUsuario" />
   <xs:element name="bajaUsuarioResponse" type="tns:bajaUsuarioResponse" />
   <xs:element name="buscarLogin" type="tns:buscarLogin" />
   <xs:element name="buscarLoginResponse" type="tns:buscarLoginResponse" />
+  <xs:element name="buscarProducto" type="tns:buscarProducto" />
+  <xs:element name="buscarProductoResponse" type="tns:buscarProductoResponse" />
+  <xs:element name="buscarProveedor" type="tns:buscarProveedor" />
+  <xs:element name="buscarProveedorResponse" type="tns:buscarProveedorResponse" />
   <xs:element name="buscarUsuario" type="tns:buscarUsuario" />
   <xs:element name="buscarUsuarioResponse" type="tns:buscarUsuarioResponse" />
+  <xs:element name="cargarProducto" type="tns:cargarProducto" />
+  <xs:element name="cargarProductoResponse" type="tns:cargarProductoResponse" />
+  <xs:element name="cargarProveedor" type="tns:cargarProveedor" />
+  <xs:element name="cargarProveedorResponse" type="tns:cargarProveedorResponse" />
   <xs:element name="cargarUsuario" type="tns:cargarUsuario" />
   <xs:element name="cargarUsuarioResponse" type="tns:cargarUsuarioResponse" />
+  <xs:element name="getBuscarProducto" type="tns:getBuscarProducto" />
+  <xs:element name="getBuscarProductoResponse" type="tns:getBuscarProductoResponse" />
+  <xs:element name="getBuscarProveedor" type="tns:getBuscarProveedor" />
+  <xs:element name="getBuscarProveedorResponse" type="tns:getBuscarProveedorResponse" />
   <xs:element name="getBuscarUsuarios" type="tns:getBuscarUsuarios" />
   <xs:element name="getBuscarUsuariosResponse" type="tns:getBuscarUsuariosResponse" />
-  <xs:element name="getDataProductos" type="tns:getDataProductos" />
-  <xs:element name="getDataProductosResponse" type="tns:getDataProductosResponse" />
+  <xs:element name="getDataProducto" type="tns:getDataProducto" />
+  <xs:element name="getDataProductoResponse" type="tns:getDataProductoResponse" />
+  <xs:element name="getDataProveedor" type="tns:getDataProveedor" />
+  <xs:element name="getDataProveedorResponse" type="tns:getDataProveedorResponse" />
   <xs:element name="getDataUsuarios" type="tns:getDataUsuarios" />
   <xs:element name="getDataUsuariosResponse" type="tns:getDataUsuariosResponse" />
   <xs:element name="getDatarLogin" type="tns:getDatarLogin" />
   <xs:element name="getDatarLoginResponse" type="tns:getDatarLoginResponse" />
+  <xs:element name="getDatarProducto" type="tns:getDatarProducto" />
+  <xs:element name="getDatarProductoResponse" type="tns:getDatarProductoResponse" />
+  <xs:element name="getDatarProveedor" type="tns:getDatarProveedor" />
+  <xs:element name="getDatarProveedorResponse" type="tns:getDatarProveedorResponse" />
   <xs:element name="getDatarUsuarios" type="tns:getDatarUsuarios" />
   <xs:element name="getDatarUsuariosResponse" type="tns:getDatarUsuariosResponse" />
-  <xs:complexType name="getDataProductos">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-      <xs:element minOccurs="0" name="arg1" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getDataProductosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="altaUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="json" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="altaUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -54,6 +83,36 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="actualizarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bajaProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bajaProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="bajaUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="json" type="xs:string" />
@@ -64,33 +123,31 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarUsuario">
+  <xs:complexType name="buscarProveedor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="json" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarUsuarioResponse">
+  <xs:complexType name="buscarProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getDatarUsuarios">
+  <xs:complexType name="getDataProveedor">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
       <xs:element minOccurs="0" name="arg1" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getDatarUsuariosResponse">
+  <xs:complexType name="getDataProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="buscarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
+  <xs:complexType name="cargarUsuario">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="buscarUsuarioResponse">
+  <xs:complexType name="cargarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -107,21 +164,34 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cargarUsuario">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="cargarUsuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="getDataUsuarios">
+  <xs:complexType name="getBuscarProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
       <xs:element minOccurs="0" name="arg1" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getDataUsuariosResponse">
+  <xs:complexType name="getBuscarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bajaProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bajaProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -133,6 +203,117 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getBuscarUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarUsuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBuscarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBuscarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarProveedor">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarProducto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataUsuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataUsuariosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>

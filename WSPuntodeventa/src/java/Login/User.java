@@ -6,7 +6,7 @@
 package Login;
 
 /**
- *
+ *  
  * @author mara_
  */
 public class User {

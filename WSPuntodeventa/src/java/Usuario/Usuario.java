@@ -18,8 +18,9 @@ public class Usuario {
     private String direccion;
     private String telefono;
     private String correo;
-     private String password;
+    private String password;
     private int permiso;
+    
 
     public Usuario(int idUsuario, String nombre, String apellido, String fecha_nacimiento, String direccion, String telefono, String correo, String password, int permiso) {
         this.idUsuario = idUsuario;
@@ -104,5 +105,5 @@ public class Usuario {
     public void setPermiso(int permiso) {
         this.permiso = permiso;
     }
-
+    
     }

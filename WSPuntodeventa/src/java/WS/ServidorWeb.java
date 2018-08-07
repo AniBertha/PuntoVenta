@@ -7,6 +7,10 @@ package WS;
 
 import Login.Login;
 import Login.User;
+import Producto.CRUD_Producto;
+import Producto.Producto;
+import Proveedor.CRUD_Proveedores;
+import Proveedor.Proveedores;
 import Usuario.CRUD_Usuario;
 import Usuario.Usuario;
 import com.google.gson.Gson;
@@ -43,6 +47,53 @@ public class ServidorWeb {
     public String actualizar(@WebParam(name="json")String json) {
         return getDataUsuarios("Actualizar",json);
     }
+    @WebMethod(operationName = "buscarUsuario")
+    public String buscarUsuario(@WebParam(name="nombre")String nombre) {
+        return getBuscarUsuarios("Buscar", nombre);
+    }
+    
+    @WebMethod(operationName = "cargarProveedor")
+    public String cargarProveedor() {
+        return getDatarProveedor("Cargar","0");
+    }
+     @WebMethod(operationName = "altaProveedor")
+    public String insertarProveedor(@WebParam(name="json")String json) {
+        return getDataProveedor("Insertar",json);
+    }
+    @WebMethod(operationName = "bajaProveedor")
+    public String eliminarProveedor(@WebParam(name="json")String json) {
+        return getDataProveedor("Eliminar",json);
+    }
+    @WebMethod(operationName = "actualizarProveedor")
+    public String actualizarProveedor(@WebParam(name="json")String json) {
+        return getDataProveedor("Actualizar",json);
+    }
+    @WebMethod(operationName = "buscarProveedor")
+    public String buscarProveedor(@WebParam(name="nombre")String nombre) {
+        return getBuscarProveedor("Buscar", nombre);
+    }
+    
+    @WebMethod(operationName = "cargarProducto")
+    public String cargarProducto() {
+        return getDatarProducto("Cargar","0");
+    }
+     @WebMethod(operationName = "altaProducto")
+    public String insertarProducto(@WebParam(name="json")String json) {
+        return getDataProducto("Insertar",json);
+    }
+    @WebMethod(operationName = "bajaProducto")
+    public String eliminarProducto(@WebParam(name="json")String json) {
+        return getDataProducto("Eliminar",json);
+    }
+    @WebMethod(operationName = "actualizarProducto")
+    public String actualizarProducto(@WebParam(name="json")String json) {
+        return getDataProducto("Actualizar",json);
+    }
+    @WebMethod(operationName = "buscarProducto")
+    public String buscarProducto(@WebParam(name="nombre")String nombre) {
+        return getBuscarProducto("Buscar", nombre);
+    }
+    
     public String getDataUsuarios(String accion, String json){
         Gson gson = new Gson();
         CRUD_Usuario db = new  CRUD_Usuario();
@@ -82,6 +133,26 @@ public class ServidorWeb {
             return ex.getMessage();
         }
     }
+     public String getBuscarUsuarios(String accion,String nombre){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        CRUD_Usuario db = new CRUD_Usuario();
+        try{
+            if(accion == "Buscar")
+                rs = db.buscarUsuario(nombre);
+            ArrayList<Usuario> anim = new ArrayList();
+            Usuario var_temp;
+            while(rs.next()){
+                var_temp = new Usuario(parseInt(rs.getString(1)),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),parseInt(rs.getString(9)));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
     //////////////////////////
     @WebMethod(operationName = "buscarLogin")
     public String buscarLogin(@WebParam(name="id")int id,@WebParam(name="password")String password) {
@@ -98,6 +169,130 @@ public class ServidorWeb {
             User var_temp;
             while(rs.next()){
                 var_temp = new User(parseInt(rs.getString(1)),rs.getString(2));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    
+    ////////////////////////////////////////PROVEEDORES///////////////////7//////////////////
+    
+    public String getDataProveedor(String accion, String json){
+        Gson gson = new Gson();
+        CRUD_Proveedores db = new CRUD_Proveedores();
+        Type tipoObjeto = new TypeToken<List <Proveedores>>(){}.getType();
+        ArrayList<Proveedores> proveedor = gson.fromJson(json,tipoObjeto);
+        Proveedores p = proveedor.get(0);
+        try{
+            if(accion == "Insertar")
+                db.AltaProveedor(p);
+            else if (accion == "Eliminar")
+                db.bajaProveedor(p);
+            else if (accion == "Actualizar")
+                db.actualizarProveedor(p);
+            return "Accion exitosa.";
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        } 
+    }
+    public String getDatarProveedor(String accion,String id){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        CRUD_Proveedores db = new CRUD_Proveedores();
+        try{
+            if(accion == "Cargar")
+                rs = db.consulta();
+            ArrayList<Proveedores> anim = new ArrayList();
+            Proveedores var_temp;
+            while(rs.next()){
+                var_temp = new Proveedores(parseInt(rs.getString(1)),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    public String getBuscarProveedor(String accion,String nombre){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        CRUD_Proveedores db = new CRUD_Proveedores();
+        try{
+            if(accion == "Buscar")
+                rs = db.buscarProveedor(nombre);
+            ArrayList<Proveedores> anim = new ArrayList();
+            Proveedores var_temp;
+            while(rs.next()){
+                var_temp = new Proveedores(parseInt(rs.getString(1)),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+
+    //////////////////////
+    
+    public String getDataProducto(String accion, String json){
+        Gson gson = new Gson();
+        CRUD_Producto db = new CRUD_Producto();
+        Type tipoObjeto = new TypeToken<List <Producto>>(){}.getType();
+        ArrayList<Producto> producto = gson.fromJson(json,tipoObjeto);
+        Producto p = producto.get(0);
+        try{
+            if(accion == "Insertar")
+                db.AltaProducto(p);
+            else if (accion == "Eliminar")
+                db.bajaProducto(p);
+            else if (accion == "Actualizar")
+                db.actualizarProducto(p);
+            return "Accion exitosa.";
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        } 
+    }
+    public String getDatarProducto(String accion,String id){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        CRUD_Producto db = new CRUD_Producto();
+        try{
+            if(accion == "Cargar")
+                rs = db.consultaProducto();
+            ArrayList<Producto> anim = new ArrayList();
+            Producto var_temp;
+            while(rs.next()){
+                var_temp = new Producto(parseInt(rs.getString(1)),rs.getString(2),rs.getString(3),rs.getString(4),parseFloat(rs.getString(5)),parseFloat(rs.getString(6)),rs.getString(7),parseInt(rs.getString(8)),parseInt(rs.getString(9)),parseInt(rs.getString(10)),parseInt(rs.getString(11)));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    public String getBuscarProducto(String accion,String nombre){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        CRUD_Producto db = new CRUD_Producto();
+        try{
+            if(accion == "Buscar")
+                rs = db.buscarProducto(nombre);
+            ArrayList<Producto> anim = new ArrayList();
+            Producto var_temp;
+            while(rs.next()){
+                var_temp = new Producto(parseInt(rs.getString(1)),rs.getString(2),rs.getString(3),rs.getString(4),parseFloat(rs.getString(5)),parseFloat(rs.getString(6)),rs.getString(7),parseInt(rs.getString(8)),parseInt(rs.getString(9)),parseInt(rs.getString(10)),parseInt(rs.getString(11)));
                 anim.add(var_temp);
             }
             String formatoJSON = gson.toJson(anim);

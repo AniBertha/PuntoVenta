@@ -32,5 +32,12 @@ namespace PuntoDeVenta
         {
 
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            FormProductos formUsuarios = new FormProductos();
+            formUsuarios.Show();
+            this.Close();
+        }
     }
 }

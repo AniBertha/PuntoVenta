@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using PuntoDeVenta;
 
 namespace PuntoDeVenta
 {
@@ -19,13 +20,18 @@ namespace PuntoDeVenta
       
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            //fgdf
             FormLateral frmLat = new FormLateral();
+
             frmLat.TopLevel = false;
             frmLat.Parent = panel1;
             frmLat.Show();
             frmLat.BringToFront();
             ActualizarTabla();
+            Globales.f = "Usuarios";
+        }
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         public void ActualizarTabla()
         {
@@ -144,6 +150,11 @@ namespace PuntoDeVenta
             txtCorreo.Text = "";
             txtPassword.Text = "";
             ActualizarTabla();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

@@ -18,9 +18,50 @@ namespace PuntoDeVenta
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            FormUsuarios formUsuarios = new FormUsuarios();
-            formUsuarios.Show();
-            this.Close();
+            if (Globales.f == "Productos")
+            {
+                Globales.formProductos.Close();
+                Globales.InstanciarProductos();
+                Globales.formUsuarios.Show();
+            }
+            else if (Globales.f == "Proveedores")
+            {
+                Globales.formProveedores.Close();
+                Globales.InstanciarProveedores();
+                Globales.formUsuarios.Show();
+            }
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            if (Globales.f == "Productos")
+            {
+                Globales.formProductos.Close();
+                Globales.InstanciarProductos();
+                Globales.formProveedores.Show();
+            }
+            else if (Globales.f == "Usuarios")
+            {
+                Globales.formUsuarios.Close();
+                Globales.InstanciarUsuarios();
+                Globales.formProveedores.Show();
+            }
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            if (Globales.f == "Proveedores")
+            {
+                Globales.formProveedores.Close();
+                Globales.InstanciarProveedores();
+                Globales.formProductos.Show();
+            }
+            else if (Globales.f == "Usuarios")
+            {
+                Globales.formUsuarios.Close();
+                Globales.InstanciarUsuarios();
+                Globales.formProductos.Show();
+            }
         }
     }
 }

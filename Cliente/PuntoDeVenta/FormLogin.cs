@@ -33,19 +33,32 @@ namespace PuntoDeVenta
             {
                 try
                 {
-                  
-
                     String cadena = client.buscarLogin(Convert.ToInt16(txtUser.Text), txtPwd.Text);
-                    
+                    //DataTable dt = (DataTable)JsonConvert.DeserializeObject(client.buscarLogin(Convert.ToInt16(txtUser.Text), txtPwd.Text), typeof(DataTable));
+                    //String permiso = dt.Rows[8].ToString();
+                    String permiso = cadena.Substring(cadena.Length - 3, 1);
                     if (cadena != "[]")
                     {
                         FormMenuPrincipal formMenuPrincipal = new FormMenuPrincipal();
+                        FormLateral formLat = new FormLateral();
                         formMenuPrincipal.Show();
+                        if (permiso == "0")
+                        {
+                            formMenuPrincipal.btnUsers.Enabled = false;
+                            formMenuPrincipal.btnUsers.BackColor = Color.Gray;
+                            formMenuPrincipal.btnProveedores.Enabled = false;
+                            formMenuPrincipal.btnProveedores.BackColor = Color.Gray;
+
+                            formLat.btnUsers.Enabled = false;
+                            formLat.btnUsers.BackColor = Color.Gray;
+                            formLat.btnProveedores.Enabled = false;
+                            formLat.btnProveedores.BackColor = Color.Gray;
+                        }
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Datos incorrectos");
+                        MessageBox.Show("Id de usuario o contraseña incorrectos.");
                     txtPwd.Text = "";
                     txtUser.Text = "";
 

@@ -26,6 +26,7 @@ namespace PuntoDeVenta
             frmLat.Show();
             frmLat.BringToFront();
             ActualizarTabla();
+            Globales.f = "Productos";
         }
 
 
@@ -136,20 +137,23 @@ namespace PuntoDeVenta
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Producto json = new Producto();
-            json.idProducto = Convert.ToInt16(txtID.Text);
-            data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented);
-            data2 += data;
-            data2 += "]";
-            txtID.Text = data2;
+            
             using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
             {
                 try
                 {
-         //           client.bajaUsuario(data2);
+
+                    json.idProducto = Convert.ToInt32(txtID.Text);
+                    data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented);
+                    data2 += data;
+                    data2 += "]";
+                    txtID.Text = data2;
+                    client.bajaProducto(data2);
 
                     MessageBox.Show("¡Usuario eliminado! :)");
                     data = "";
                     data2 = "[";
+                    ActualizarTabla();
                 }
                 catch
                 {
@@ -157,6 +161,10 @@ namespace PuntoDeVenta
 
                 }
             }
+
+            
+
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

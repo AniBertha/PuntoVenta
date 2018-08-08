@@ -138,6 +138,7 @@
             this.btnProveedores.TabIndex = 8;
             this.btnProveedores.Text = "PROVEEDORES";
             this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
             // panel5
             // 
@@ -260,10 +261,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.Button btnUsers;
+        public System.Windows.Forms.Button btnProveedores;
     }
 }

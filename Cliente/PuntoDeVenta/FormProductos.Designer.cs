@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbProvedor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.textPC = new System.Windows.Forms.TextBox();
             this.textPV = new System.Windows.Forms.TextBox();
@@ -61,8 +63,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbProvedor = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
@@ -99,6 +99,27 @@
             this.gbDatos.TabIndex = 7;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de producto";
+            // 
+            // cbProvedor
+            // 
+            this.cbProvedor.FormattingEnabled = true;
+            this.cbProvedor.Items.AddRange(new object[] {
+            "Usuario",
+            "Administrador"});
+            this.cbProvedor.Location = new System.Drawing.Point(176, 194);
+            this.cbProvedor.Name = "cbProvedor";
+            this.cbProvedor.Size = new System.Drawing.Size(205, 24);
+            this.cbProvedor.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Provedor:";
             // 
             // cbDepartamento
             // 
@@ -426,27 +447,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Ingrese la búsqueda:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 197);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Provedor:";
-            // 
-            // cbProvedor
-            // 
-            this.cbProvedor.FormattingEnabled = true;
-            this.cbProvedor.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
-            this.cbProvedor.Location = new System.Drawing.Point(176, 194);
-            this.cbProvedor.Name = "cbProvedor";
-            this.cbProvedor.Size = new System.Drawing.Size(205, 24);
-            this.cbProvedor.TabIndex = 28;
-            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,6 +461,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbDatos);
             this.Name = "FormProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

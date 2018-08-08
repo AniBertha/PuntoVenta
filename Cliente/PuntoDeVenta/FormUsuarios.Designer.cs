@@ -1,5 +1,6 @@
 ﻿namespace PuntoDeVenta
 {
+    
     partial class FormUsuarios
     {
         /// <summary>
@@ -165,6 +166,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(565, 32);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 22);
             this.txtTelefono.TabIndex = 11;
@@ -289,17 +291,17 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.YellowGreen;
-            this.panel6.Location = new System.Drawing.Point(199, 630);
+            this.panel6.Location = new System.Drawing.Point(0, 630);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(785, 10);
+            this.panel6.Size = new System.Drawing.Size(1000, 10);
             this.panel6.TabIndex = 13;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SlateGray;
-            this.panel5.Location = new System.Drawing.Point(199, 614);
+            this.panel5.Location = new System.Drawing.Point(0, 614);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(785, 10);
+            this.panel5.Size = new System.Drawing.Size(1000, 10);
             this.panel5.TabIndex = 12;
             // 
             // btnActualizar
@@ -354,8 +356,9 @@
             // 
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 615);
+            this.panel1.Size = new System.Drawing.Size(200, 560);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnLimpiar
             // 
@@ -424,6 +427,7 @@
         }
 
         #endregion
+        FormLateral frmLat = new FormLateral();
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAgregar;

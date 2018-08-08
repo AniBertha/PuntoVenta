@@ -23,8 +23,7 @@ namespace PuntoDeVenta
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            FormUsuarios formUsuarios = new FormUsuarios();
-            formUsuarios.Show();
+            Globales.formUsuarios.Show();
             this.Close();
         }
 
@@ -35,8 +34,13 @@ namespace PuntoDeVenta
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            FormProductos formUsuarios = new FormProductos();
-            formUsuarios.Show();
+            Globales.formProductos.Show();
+            this.Close();
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Globales.formProveedores.Show();
             this.Close();
         }
     }

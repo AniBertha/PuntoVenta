@@ -86,9 +86,11 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(517, 51);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(147, 22);
             this.txtTelefono.TabIndex = 15;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblTelefono
             // 
@@ -174,6 +176,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(175, 24);
             this.txtID.Name = "txtID";
@@ -211,6 +214,7 @@
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.Size = new System.Drawing.Size(735, 190);
             this.dgvTabla.TabIndex = 18;
+            this.dgvTabla.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvTabla_MouseClick);
             // 
             // btnBuscar
             // 
@@ -226,14 +230,17 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(166, 30);
+            this.txtBusqueda.Location = new System.Drawing.Point(209, 30);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(402, 21);
+            this.txtBusqueda.Size = new System.Drawing.Size(359, 21);
             this.txtBusqueda.TabIndex = 1;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // label9
             // 
@@ -241,9 +248,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(22, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 16);
+            this.label9.Size = new System.Drawing.Size(181, 16);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Ingrese la busqueda:";
+            this.label9.Text = "Ingrese la busqueda (por ID):";
             // 
             // btnActualizar
             // 
@@ -275,6 +282,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardar
             // 
@@ -287,9 +295,10 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 85);
             this.btnGuardar.TabIndex = 1;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Limpiar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -302,7 +311,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(89, 85);
             this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Text = "Agregar";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnAnadir_Click);
@@ -313,6 +322,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 615);
             this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTituloProvedores
             // 
@@ -358,6 +368,8 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "FormProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormProveedores_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbBusqueda.ResumeLayout(false);

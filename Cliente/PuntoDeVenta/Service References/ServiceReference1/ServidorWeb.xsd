@@ -26,6 +26,12 @@
   <xs:element name="buscarProveedorResponse" type="tns:buscarProveedorResponse" />
   <xs:element name="buscarUsuario" type="tns:buscarUsuario" />
   <xs:element name="buscarUsuarioResponse" type="tns:buscarUsuarioResponse" />
+  <xs:element name="cargarCatDepartamento" type="tns:cargarCatDepartamento" />
+  <xs:element name="cargarCatDepartamentoResponse" type="tns:cargarCatDepartamentoResponse" />
+  <xs:element name="cargarCatMedida" type="tns:cargarCatMedida" />
+  <xs:element name="cargarCatMedidaResponse" type="tns:cargarCatMedidaResponse" />
+  <xs:element name="cargarCatProveedor" type="tns:cargarCatProveedor" />
+  <xs:element name="cargarCatProveedorResponse" type="tns:cargarCatProveedorResponse" />
   <xs:element name="cargarProducto" type="tns:cargarProducto" />
   <xs:element name="cargarProductoResponse" type="tns:cargarProductoResponse" />
   <xs:element name="cargarProveedor" type="tns:cargarProveedor" />
@@ -44,6 +50,12 @@
   <xs:element name="getDataProveedorResponse" type="tns:getDataProveedorResponse" />
   <xs:element name="getDataUsuarios" type="tns:getDataUsuarios" />
   <xs:element name="getDataUsuariosResponse" type="tns:getDataUsuariosResponse" />
+  <xs:element name="getDatarCatDepartamento" type="tns:getDatarCatDepartamento" />
+  <xs:element name="getDatarCatDepartamentoResponse" type="tns:getDatarCatDepartamentoResponse" />
+  <xs:element name="getDatarCatMedida" type="tns:getDatarCatMedida" />
+  <xs:element name="getDatarCatMedidaResponse" type="tns:getDatarCatMedidaResponse" />
+  <xs:element name="getDatarCatProveedor" type="tns:getDatarCatProveedor" />
+  <xs:element name="getDatarCatProveedorResponse" type="tns:getDatarCatProveedorResponse" />
   <xs:element name="getDatarLogin" type="tns:getDatarLogin" />
   <xs:element name="getDatarLoginResponse" type="tns:getDatarLoginResponse" />
   <xs:element name="getDatarProducto" type="tns:getDatarProducto" />
@@ -52,22 +64,22 @@
   <xs:element name="getDatarProveedorResponse" type="tns:getDatarProveedorResponse" />
   <xs:element name="getDatarUsuarios" type="tns:getDatarUsuarios" />
   <xs:element name="getDatarUsuariosResponse" type="tns:getDatarUsuariosResponse" />
-  <xs:complexType name="altaUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="json" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="altaUsuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="altaProveedor">
     <xs:sequence>
       <xs:element minOccurs="0" name="json" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="altaProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="altaUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -99,6 +111,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarCatProveedor">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarCatProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarCatDepartamento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarCatDepartamentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarCatMedida">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarCatMedidaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatMedida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatMedidaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -144,14 +191,6 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cargarUsuario">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="cargarUsuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="getBuscarProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -159,6 +198,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getBuscarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="cargarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -181,6 +228,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="bajaProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -228,6 +286,16 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="buscarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="getDatarUsuarios">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -235,16 +303,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getDatarUsuariosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -274,6 +332,17 @@
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="cargarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatDepartamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDatarCatDepartamentoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>

@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="Departamento.cs" />
     <Compile Include="FormLateral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +87,8 @@
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Globales.cs" />
+    <Compile Include="LegendsDepartameto.cs" />
+    <Compile Include="Medida.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

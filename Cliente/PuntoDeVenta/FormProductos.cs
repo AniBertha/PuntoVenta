@@ -26,7 +26,53 @@ namespace PuntoDeVenta
             frmLat.Show();
             frmLat.BringToFront();
             ActualizarTabla();
+            ActualizarDepartamento();
             Globales.f = "Productos";
+        }
+
+
+        public void ActualizarDepartamento()
+        {
+            using (ServiceReference1.ServidorWebClient client = new ServiceReference1.ServidorWebClient())
+            {
+                try
+                {
+                    String respuestaDepa= client.cargarCatDepartamento();
+                    String respuestaProv= client.cargarCatProveedor();
+                    String respuestaMedida = client.cargarCatMedida();
+                    //MessageBox.Show("y ahora"+respuesta);
+                    var a = JsonConvert.DeserializeObject<List<Departamento>>(respuestaDepa);
+                    var b = JsonConvert.DeserializeObject<List<Proveedor>>(respuestaProv);
+                    var c= JsonConvert.DeserializeObject<List<Medida>>(respuestaMedida);
+                    foreach (var depa in a)
+                    {
+                        ComboBoxItem item = new ComboBoxItem();
+                        item.Text = depa.nombre;
+                        item.Value = depa.idDepartamento;
+                        cbDepartamento.Items.Add(item);
+                    }
+
+                    foreach (var prov in b)
+                    {
+                        ComboBoxItem item = new ComboBoxItem();
+                        item.Text = prov.RazonSocial;
+                        item.Value = prov.IDProveedor;
+                        cbProvedor.Items.Add(item);
+                    }
+
+                    foreach (var med in c)
+                    {
+                        ComboBoxItem item = new ComboBoxItem();
+                        item.Text = med.nombre;
+                        item.Value = med.idMedida;
+                        cbUnidad.Items.Add(item);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("No sirvio :(Auxilio");
+                }
+            }
         }
 
 
@@ -37,12 +83,11 @@ namespace PuntoDeVenta
                 try
                 {
                     DataTable dt = (DataTable)JsonConvert.DeserializeObject(client.cargarProducto(), typeof(DataTable));
-
                     dgvTabla.DataSource = dt;
                 }
                 catch
                 {
-                    MessageBox.Show("No sirvio :(");
+                    MessageBox.Show("No sirvio Tabla :(");
                 }
             }
         }
@@ -58,17 +103,16 @@ namespace PuntoDeVenta
                 {
                     Producto json = new Producto();
                     json.nombre = txtNombre.Text;
-                    json.marca = txtDescripcion.Text;
-
-                    json.descripcion= cbDepartamento.Text;
-                    json.precioVenta = cbProvedor.Text;
-                    json.precioCompra = textPC.Text;
+                    json.marca = txtMarca.Text;
+                    json.descripcion= txtDescripcion.Text;
+                    json.precioVenta = Convert.ToDecimal(textPV.Text); 
+                    json.precioCompra = Convert.ToDecimal(textPC.Text);
                     json.caducidad = textCaducidad.Text;
                     json.stock = Convert.ToInt16(txtCantidad.Text);
                     json.medida = cbUnidad.SelectedIndex;
                     json.departamento = cbDepartamento.SelectedIndex;
                     json.provedor = cbProvedor.SelectedIndex;
-                    json.idProducto = Convert.ToInt16(txtID.Text); 
+                   
                     data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
                     data2 += data;
 
@@ -76,8 +120,8 @@ namespace PuntoDeVenta
                     {
                         try
                         {
-                            client.altaUsuario(data2);
-                            MessageBox.Show("Usuario Insertado! :)");
+                            client.altaProducto(data2);
+                            MessageBox.Show("Producto Insertado! :)");
                             data = "";
                             data2 = "[";
                             ActualizarTabla();
@@ -105,16 +149,14 @@ namespace PuntoDeVenta
             Producto json = new Producto();
             json.nombre = txtNombre.Text;
             json.marca = txtMarca.Text;
-
             json.descripcion = txtDescripcion.Text;
-            json.precioVenta = textPV.Text;
-            json.precioCompra = textPC.Text;
+            json.precioVenta = Convert.ToDecimal(textPV.Text);
+            json.precioCompra = Convert.ToDecimal(textPC.Text);
             json.caducidad = textCaducidad.Text;
             json.stock = Convert.ToInt16(txtCantidad.Text);
             json.medida = cbUnidad.SelectedIndex;
             json.departamento = cbDepartamento.SelectedIndex;
             json.provedor = cbProvedor.SelectedIndex;
-            json.idProducto = Convert.ToInt16(txtID.Text);
             data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
             data2 += data;
 
@@ -172,16 +214,14 @@ namespace PuntoDeVenta
             Producto json = new Producto();
             json.nombre = txtNombre.Text;
             json.marca = txtMarca.Text;
-
             json.descripcion = txtDescripcion.Text;
-            json.precioVenta = textPV.Text;
-            json.precioCompra = textPC.Text;
+            json.precioVenta = Convert.ToDecimal(textPV.Text);
+            json.precioCompra = Convert.ToDecimal(textPC.Text);
             json.caducidad = textCaducidad.Text;
             json.stock = Convert.ToInt16(txtCantidad.Text);
             json.medida = cbUnidad.SelectedIndex;
             json.departamento = cbDepartamento.SelectedIndex;
             json.provedor = cbProvedor.SelectedIndex;
-            json.idProducto = Convert.ToInt16(txtID.Text);
             data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
             data2 += data;
 

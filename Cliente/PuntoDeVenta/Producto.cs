@@ -11,8 +11,8 @@ namespace PuntoDeVenta
         public string nombre { get; set; }
         public string marca { get; set; }
         public string descripcion { get; set; }
-        public string precioVenta { get; set; }
-        public string precioCompra { get; set; }
+        public decimal precioVenta { get; set; }
+        public decimal precioCompra { get; set; }
         public string caducidad { get; set; }
         public int stock { get; set; }
         public int medida { get; set; }

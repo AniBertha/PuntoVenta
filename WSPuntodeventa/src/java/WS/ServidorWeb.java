@@ -5,6 +5,12 @@
  */
 package WS;
 
+import Catalogos.Departamento;
+import Catalogos.Departamento_datos;
+import Catalogos.Medida;
+import Catalogos.Medida_datos;
+import Catalogos.Proveedor;
+import Catalogos.Proveedor_datos;
 import Login.Login;
 import Login.User;
 import Producto.CRUD_Producto;
@@ -31,6 +37,82 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "ServidorWeb")
 public class ServidorWeb {
+    //////////////////////////CATALOGOS///////////////////////////////
+    @WebMethod(operationName = "cargarCatDepartamento")
+    public String cargarCatDepartamento() {
+        return getDatarCatDepartamento("Cargar","0");
+    }
+    @WebMethod(operationName = "cargarCatMedida")
+    public String cargarCatMedida() {
+        return getDatarCatMedida("Cargar","0");
+    }
+    @WebMethod(operationName = "cargarCatProveedor")
+    public String cargarCatProveedor() {
+        return getDatarCatProveedor("Cargar","0");
+    }
+    
+    public String getDatarCatDepartamento(String accion,String id){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        Departamento_datos db = new Departamento_datos();
+        try{
+            if(accion == "Cargar")
+                rs = db.Cargar();
+            ArrayList<Departamento> anim = new ArrayList();
+            Departamento var_temp;
+            while(rs.next()){
+                var_temp = new Departamento(parseInt(rs.getString(1)),rs.getString(2));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    public String getDatarCatMedida(String accion,String id){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        Medida_datos db = new Medida_datos();
+        try{
+            if(accion == "Cargar")
+                rs = db.Cargar();
+            ArrayList<Medida> anim = new ArrayList();
+            Medida var_temp;
+            while(rs.next()){
+                var_temp = new Medida(parseInt(rs.getString(1)),rs.getString(2));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    
+    public String getDatarCatProveedor(String accion,String id){
+        Gson gson = new Gson();
+        ResultSet rs=null;
+        Proveedor_datos db = new Proveedor_datos();
+        try{
+            if(accion == "Cargar")
+                rs = db.Cargar();
+            ArrayList<Proveedor> anim = new ArrayList();
+            Proveedor var_temp;
+            while(rs.next()){
+                var_temp = new Proveedor(parseInt(rs.getString(1)),rs.getString(2));
+                anim.add(var_temp);
+            }
+            String formatoJSON = gson.toJson(anim);
+            return formatoJSON;
+        }
+        catch(Exception ex){
+            return ex.getMessage();
+        }
+    }
+    //////////////////////////CATALOGOS///////////////////////////////
     @WebMethod(operationName = "cargarUsuario")
     public String cargar() {
         return getDatarUsuarios("Cargar","0");
@@ -168,7 +250,7 @@ public class ServidorWeb {
             ArrayList<User> anim = new ArrayList();
             User var_temp;
             while(rs.next()){
-                var_temp = new User(parseInt(rs.getString(1)),rs.getString(2));
+                var_temp = new User(parseInt(rs.getString(1)),rs.getString(2),parseInt(rs.getString(9)));
                 anim.add(var_temp);
             }
             String formatoJSON = gson.toJson(anim);

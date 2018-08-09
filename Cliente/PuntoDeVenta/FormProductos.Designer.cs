@@ -103,9 +103,6 @@
             // cbProvedor
             // 
             this.cbProvedor.FormattingEnabled = true;
-            this.cbProvedor.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
             this.cbProvedor.Location = new System.Drawing.Point(176, 194);
             this.cbProvedor.Name = "cbProvedor";
             this.cbProvedor.Size = new System.Drawing.Size(205, 24);
@@ -124,9 +121,6 @@
             // cbDepartamento
             // 
             this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
             this.cbDepartamento.Location = new System.Drawing.Point(176, 157);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(205, 24);
@@ -189,9 +183,6 @@
             // cbUnidad
             // 
             this.cbUnidad.FormattingEnabled = true;
-            this.cbUnidad.Items.AddRange(new object[] {
-            "Usuario",
-            "Administrador"});
             this.cbUnidad.Location = new System.Drawing.Point(576, 162);
             this.cbUnidad.Name = "cbUnidad";
             this.cbUnidad.Size = new System.Drawing.Size(142, 24);

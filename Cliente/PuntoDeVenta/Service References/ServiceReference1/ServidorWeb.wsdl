@@ -5,53 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/WSPuntodeventa/ServidorWeb?xsd=1" namespace="http://WS/" />
     </xsd:schema>
   </types>
-  <message name="altaUsuario">
-    <part name="parameters" element="tns:altaUsuario" />
+  <message name="cargarCatDepartamento">
+    <part name="parameters" element="tns:cargarCatDepartamento" />
   </message>
-  <message name="altaUsuarioResponse">
-    <part name="parameters" element="tns:altaUsuarioResponse" />
+  <message name="cargarCatDepartamentoResponse">
+    <part name="parameters" element="tns:cargarCatDepartamentoResponse" />
   </message>
-  <message name="cargarUsuario">
-    <part name="parameters" element="tns:cargarUsuario" />
+  <message name="cargarCatProveedor">
+    <part name="parameters" element="tns:cargarCatProveedor" />
   </message>
-  <message name="cargarUsuarioResponse">
-    <part name="parameters" element="tns:cargarUsuarioResponse" />
-  </message>
-  <message name="actualizarUsuario">
-    <part name="parameters" element="tns:actualizarUsuario" />
-  </message>
-  <message name="actualizarUsuarioResponse">
-    <part name="parameters" element="tns:actualizarUsuarioResponse" />
-  </message>
-  <message name="getDatarProveedor">
-    <part name="parameters" element="tns:getDatarProveedor" />
-  </message>
-  <message name="getDatarProveedorResponse">
-    <part name="parameters" element="tns:getDatarProveedorResponse" />
-  </message>
-  <message name="bajaProveedor">
-    <part name="parameters" element="tns:bajaProveedor" />
-  </message>
-  <message name="bajaProveedorResponse">
-    <part name="parameters" element="tns:bajaProveedorResponse" />
-  </message>
-  <message name="actualizarProducto">
-    <part name="parameters" element="tns:actualizarProducto" />
-  </message>
-  <message name="actualizarProductoResponse">
-    <part name="parameters" element="tns:actualizarProductoResponse" />
-  </message>
-  <message name="getBuscarUsuarios">
-    <part name="parameters" element="tns:getBuscarUsuarios" />
-  </message>
-  <message name="getBuscarUsuariosResponse">
-    <part name="parameters" element="tns:getBuscarUsuariosResponse" />
-  </message>
-  <message name="getBuscarProducto">
-    <part name="parameters" element="tns:getBuscarProducto" />
-  </message>
-  <message name="getBuscarProductoResponse">
-    <part name="parameters" element="tns:getBuscarProductoResponse" />
+  <message name="cargarCatProveedorResponse">
+    <part name="parameters" element="tns:cargarCatProveedorResponse" />
   </message>
   <message name="getBuscarProveedor">
     <part name="parameters" element="tns:getBuscarProveedor" />
@@ -59,17 +23,71 @@
   <message name="getBuscarProveedorResponse">
     <part name="parameters" element="tns:getBuscarProveedorResponse" />
   </message>
+  <message name="altaProveedor">
+    <part name="parameters" element="tns:altaProveedor" />
+  </message>
+  <message name="altaProveedorResponse">
+    <part name="parameters" element="tns:altaProveedorResponse" />
+  </message>
+  <message name="bajaProveedor">
+    <part name="parameters" element="tns:bajaProveedor" />
+  </message>
+  <message name="bajaProveedorResponse">
+    <part name="parameters" element="tns:bajaProveedorResponse" />
+  </message>
   <message name="actualizarProveedor">
     <part name="parameters" element="tns:actualizarProveedor" />
   </message>
   <message name="actualizarProveedorResponse">
     <part name="parameters" element="tns:actualizarProveedorResponse" />
   </message>
-  <message name="altaProveedor">
-    <part name="parameters" element="tns:altaProveedor" />
+  <message name="actualizarProducto">
+    <part name="parameters" element="tns:actualizarProducto" />
   </message>
-  <message name="altaProveedorResponse">
-    <part name="parameters" element="tns:altaProveedorResponse" />
+  <message name="actualizarProductoResponse">
+    <part name="parameters" element="tns:actualizarProductoResponse" />
+  </message>
+  <message name="getDatarProveedor">
+    <part name="parameters" element="tns:getDatarProveedor" />
+  </message>
+  <message name="getDatarProveedorResponse">
+    <part name="parameters" element="tns:getDatarProveedorResponse" />
+  </message>
+  <message name="getDatarCatDepartamento">
+    <part name="parameters" element="tns:getDatarCatDepartamento" />
+  </message>
+  <message name="getDatarCatDepartamentoResponse">
+    <part name="parameters" element="tns:getDatarCatDepartamentoResponse" />
+  </message>
+  <message name="getBuscarProducto">
+    <part name="parameters" element="tns:getBuscarProducto" />
+  </message>
+  <message name="getBuscarProductoResponse">
+    <part name="parameters" element="tns:getBuscarProductoResponse" />
+  </message>
+  <message name="getBuscarUsuarios">
+    <part name="parameters" element="tns:getBuscarUsuarios" />
+  </message>
+  <message name="getBuscarUsuariosResponse">
+    <part name="parameters" element="tns:getBuscarUsuariosResponse" />
+  </message>
+  <message name="getDatarCatMedida">
+    <part name="parameters" element="tns:getDatarCatMedida" />
+  </message>
+  <message name="getDatarCatMedidaResponse">
+    <part name="parameters" element="tns:getDatarCatMedidaResponse" />
+  </message>
+  <message name="getDatarCatProveedor">
+    <part name="parameters" element="tns:getDatarCatProveedor" />
+  </message>
+  <message name="getDatarCatProveedorResponse">
+    <part name="parameters" element="tns:getDatarCatProveedorResponse" />
+  </message>
+  <message name="cargarUsuario">
+    <part name="parameters" element="tns:cargarUsuario" />
+  </message>
+  <message name="cargarUsuarioResponse">
+    <part name="parameters" element="tns:cargarUsuarioResponse" />
   </message>
   <message name="cargarProveedor">
     <part name="parameters" element="tns:cargarProveedor" />
@@ -77,29 +95,11 @@
   <message name="cargarProveedorResponse">
     <part name="parameters" element="tns:cargarProveedorResponse" />
   </message>
-  <message name="getDataProveedor">
-    <part name="parameters" element="tns:getDataProveedor" />
+  <message name="buscarUsuario">
+    <part name="parameters" element="tns:buscarUsuario" />
   </message>
-  <message name="getDataProveedorResponse">
-    <part name="parameters" element="tns:getDataProveedorResponse" />
-  </message>
-  <message name="getDatarLogin">
-    <part name="parameters" element="tns:getDatarLogin" />
-  </message>
-  <message name="getDatarLoginResponse">
-    <part name="parameters" element="tns:getDatarLoginResponse" />
-  </message>
-  <message name="buscarProveedor">
-    <part name="parameters" element="tns:buscarProveedor" />
-  </message>
-  <message name="buscarProveedorResponse">
-    <part name="parameters" element="tns:buscarProveedorResponse" />
-  </message>
-  <message name="getDatarProducto">
-    <part name="parameters" element="tns:getDatarProducto" />
-  </message>
-  <message name="getDatarProductoResponse">
-    <part name="parameters" element="tns:getDatarProductoResponse" />
+  <message name="buscarUsuarioResponse">
+    <part name="parameters" element="tns:buscarUsuarioResponse" />
   </message>
   <message name="bajaUsuario">
     <part name="parameters" element="tns:bajaUsuario" />
@@ -107,11 +107,11 @@
   <message name="bajaUsuarioResponse">
     <part name="parameters" element="tns:bajaUsuarioResponse" />
   </message>
-  <message name="bajaProducto">
-    <part name="parameters" element="tns:bajaProducto" />
+  <message name="buscarProducto">
+    <part name="parameters" element="tns:buscarProducto" />
   </message>
-  <message name="bajaProductoResponse">
-    <part name="parameters" element="tns:bajaProductoResponse" />
+  <message name="buscarProductoResponse">
+    <part name="parameters" element="tns:buscarProductoResponse" />
   </message>
   <message name="cargarProducto">
     <part name="parameters" element="tns:cargarProducto" />
@@ -119,29 +119,17 @@
   <message name="cargarProductoResponse">
     <part name="parameters" element="tns:cargarProductoResponse" />
   </message>
+  <message name="cargarCatMedida">
+    <part name="parameters" element="tns:cargarCatMedida" />
+  </message>
+  <message name="cargarCatMedidaResponse">
+    <part name="parameters" element="tns:cargarCatMedidaResponse" />
+  </message>
   <message name="getDataUsuarios">
     <part name="parameters" element="tns:getDataUsuarios" />
   </message>
   <message name="getDataUsuariosResponse">
     <part name="parameters" element="tns:getDataUsuariosResponse" />
-  </message>
-  <message name="altaProducto">
-    <part name="parameters" element="tns:altaProducto" />
-  </message>
-  <message name="altaProductoResponse">
-    <part name="parameters" element="tns:altaProductoResponse" />
-  </message>
-  <message name="getDataProducto">
-    <part name="parameters" element="tns:getDataProducto" />
-  </message>
-  <message name="getDataProductoResponse">
-    <part name="parameters" element="tns:getDataProductoResponse" />
-  </message>
-  <message name="buscarLogin">
-    <part name="parameters" element="tns:buscarLogin" />
-  </message>
-  <message name="buscarLoginResponse">
-    <part name="parameters" element="tns:buscarLoginResponse" />
   </message>
   <message name="getDatarUsuarios">
     <part name="parameters" element="tns:getDatarUsuarios" />
@@ -149,127 +137,199 @@
   <message name="getDatarUsuariosResponse">
     <part name="parameters" element="tns:getDatarUsuariosResponse" />
   </message>
-  <message name="buscarUsuario">
-    <part name="parameters" element="tns:buscarUsuario" />
+  <message name="getDatarProducto">
+    <part name="parameters" element="tns:getDatarProducto" />
   </message>
-  <message name="buscarUsuarioResponse">
-    <part name="parameters" element="tns:buscarUsuarioResponse" />
+  <message name="getDatarProductoResponse">
+    <part name="parameters" element="tns:getDatarProductoResponse" />
   </message>
-  <message name="buscarProducto">
-    <part name="parameters" element="tns:buscarProducto" />
+  <message name="altaProducto">
+    <part name="parameters" element="tns:altaProducto" />
   </message>
-  <message name="buscarProductoResponse">
-    <part name="parameters" element="tns:buscarProductoResponse" />
+  <message name="altaProductoResponse">
+    <part name="parameters" element="tns:altaProductoResponse" />
+  </message>
+  <message name="bajaProducto">
+    <part name="parameters" element="tns:bajaProducto" />
+  </message>
+  <message name="bajaProductoResponse">
+    <part name="parameters" element="tns:bajaProductoResponse" />
+  </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </message>
+  <message name="getDatarLogin">
+    <part name="parameters" element="tns:getDatarLogin" />
+  </message>
+  <message name="getDatarLoginResponse">
+    <part name="parameters" element="tns:getDatarLoginResponse" />
+  </message>
+  <message name="getDataProveedor">
+    <part name="parameters" element="tns:getDataProveedor" />
+  </message>
+  <message name="getDataProveedorResponse">
+    <part name="parameters" element="tns:getDataProveedorResponse" />
+  </message>
+  <message name="altaUsuario">
+    <part name="parameters" element="tns:altaUsuario" />
+  </message>
+  <message name="altaUsuarioResponse">
+    <part name="parameters" element="tns:altaUsuarioResponse" />
+  </message>
+  <message name="getDataProducto">
+    <part name="parameters" element="tns:getDataProducto" />
+  </message>
+  <message name="getDataProductoResponse">
+    <part name="parameters" element="tns:getDataProductoResponse" />
+  </message>
+  <message name="buscarProveedor">
+    <part name="parameters" element="tns:buscarProveedor" />
+  </message>
+  <message name="buscarProveedorResponse">
+    <part name="parameters" element="tns:buscarProveedorResponse" />
+  </message>
+  <message name="buscarLogin">
+    <part name="parameters" element="tns:buscarLogin" />
+  </message>
+  <message name="buscarLoginResponse">
+    <part name="parameters" element="tns:buscarLoginResponse" />
   </message>
   <portType name="ServidorWeb">
-    <operation name="altaUsuario">
-      <input wsam:Action="http://WS/ServidorWeb/altaUsuarioRequest" message="tns:altaUsuario" />
-      <output wsam:Action="http://WS/ServidorWeb/altaUsuarioResponse" message="tns:altaUsuarioResponse" />
+    <operation name="cargarCatDepartamento">
+      <input wsam:Action="http://WS/ServidorWeb/cargarCatDepartamentoRequest" message="tns:cargarCatDepartamento" />
+      <output wsam:Action="http://WS/ServidorWeb/cargarCatDepartamentoResponse" message="tns:cargarCatDepartamentoResponse" />
     </operation>
-    <operation name="cargarUsuario">
-      <input wsam:Action="http://WS/ServidorWeb/cargarUsuarioRequest" message="tns:cargarUsuario" />
-      <output wsam:Action="http://WS/ServidorWeb/cargarUsuarioResponse" message="tns:cargarUsuarioResponse" />
-    </operation>
-    <operation name="actualizarUsuario">
-      <input wsam:Action="http://WS/ServidorWeb/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
-      <output wsam:Action="http://WS/ServidorWeb/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
-    </operation>
-    <operation name="getDatarProveedor">
-      <input wsam:Action="http://WS/ServidorWeb/getDatarProveedorRequest" message="tns:getDatarProveedor" />
-      <output wsam:Action="http://WS/ServidorWeb/getDatarProveedorResponse" message="tns:getDatarProveedorResponse" />
-    </operation>
-    <operation name="bajaProveedor">
-      <input wsam:Action="http://WS/ServidorWeb/bajaProveedorRequest" message="tns:bajaProveedor" />
-      <output wsam:Action="http://WS/ServidorWeb/bajaProveedorResponse" message="tns:bajaProveedorResponse" />
-    </operation>
-    <operation name="actualizarProducto">
-      <input wsam:Action="http://WS/ServidorWeb/actualizarProductoRequest" message="tns:actualizarProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
-    </operation>
-    <operation name="getBuscarUsuarios">
-      <input wsam:Action="http://WS/ServidorWeb/getBuscarUsuariosRequest" message="tns:getBuscarUsuarios" />
-      <output wsam:Action="http://WS/ServidorWeb/getBuscarUsuariosResponse" message="tns:getBuscarUsuariosResponse" />
-    </operation>
-    <operation name="getBuscarProducto">
-      <input wsam:Action="http://WS/ServidorWeb/getBuscarProductoRequest" message="tns:getBuscarProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/getBuscarProductoResponse" message="tns:getBuscarProductoResponse" />
+    <operation name="cargarCatProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/cargarCatProveedorRequest" message="tns:cargarCatProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/cargarCatProveedorResponse" message="tns:cargarCatProveedorResponse" />
     </operation>
     <operation name="getBuscarProveedor">
       <input wsam:Action="http://WS/ServidorWeb/getBuscarProveedorRequest" message="tns:getBuscarProveedor" />
       <output wsam:Action="http://WS/ServidorWeb/getBuscarProveedorResponse" message="tns:getBuscarProveedorResponse" />
     </operation>
+    <operation name="altaProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/altaProveedorRequest" message="tns:altaProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/altaProveedorResponse" message="tns:altaProveedorResponse" />
+    </operation>
+    <operation name="bajaProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/bajaProveedorRequest" message="tns:bajaProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/bajaProveedorResponse" message="tns:bajaProveedorResponse" />
+    </operation>
     <operation name="actualizarProveedor">
       <input wsam:Action="http://WS/ServidorWeb/actualizarProveedorRequest" message="tns:actualizarProveedor" />
       <output wsam:Action="http://WS/ServidorWeb/actualizarProveedorResponse" message="tns:actualizarProveedorResponse" />
     </operation>
-    <operation name="altaProveedor">
-      <input wsam:Action="http://WS/ServidorWeb/altaProveedorRequest" message="tns:altaProveedor" />
-      <output wsam:Action="http://WS/ServidorWeb/altaProveedorResponse" message="tns:altaProveedorResponse" />
+    <operation name="actualizarProducto">
+      <input wsam:Action="http://WS/ServidorWeb/actualizarProductoRequest" message="tns:actualizarProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
+    </operation>
+    <operation name="getDatarProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarProveedorRequest" message="tns:getDatarProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarProveedorResponse" message="tns:getDatarProveedorResponse" />
+    </operation>
+    <operation name="getDatarCatDepartamento">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarCatDepartamentoRequest" message="tns:getDatarCatDepartamento" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarCatDepartamentoResponse" message="tns:getDatarCatDepartamentoResponse" />
+    </operation>
+    <operation name="getBuscarProducto">
+      <input wsam:Action="http://WS/ServidorWeb/getBuscarProductoRequest" message="tns:getBuscarProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/getBuscarProductoResponse" message="tns:getBuscarProductoResponse" />
+    </operation>
+    <operation name="getBuscarUsuarios">
+      <input wsam:Action="http://WS/ServidorWeb/getBuscarUsuariosRequest" message="tns:getBuscarUsuarios" />
+      <output wsam:Action="http://WS/ServidorWeb/getBuscarUsuariosResponse" message="tns:getBuscarUsuariosResponse" />
+    </operation>
+    <operation name="getDatarCatMedida">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarCatMedidaRequest" message="tns:getDatarCatMedida" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarCatMedidaResponse" message="tns:getDatarCatMedidaResponse" />
+    </operation>
+    <operation name="getDatarCatProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarCatProveedorRequest" message="tns:getDatarCatProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarCatProveedorResponse" message="tns:getDatarCatProveedorResponse" />
+    </operation>
+    <operation name="cargarUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/cargarUsuarioRequest" message="tns:cargarUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/cargarUsuarioResponse" message="tns:cargarUsuarioResponse" />
     </operation>
     <operation name="cargarProveedor">
       <input wsam:Action="http://WS/ServidorWeb/cargarProveedorRequest" message="tns:cargarProveedor" />
       <output wsam:Action="http://WS/ServidorWeb/cargarProveedorResponse" message="tns:cargarProveedorResponse" />
     </operation>
-    <operation name="getDataProveedor">
-      <input wsam:Action="http://WS/ServidorWeb/getDataProveedorRequest" message="tns:getDataProveedor" />
-      <output wsam:Action="http://WS/ServidorWeb/getDataProveedorResponse" message="tns:getDataProveedorResponse" />
-    </operation>
-    <operation name="getDatarLogin">
-      <input wsam:Action="http://WS/ServidorWeb/getDatarLoginRequest" message="tns:getDatarLogin" />
-      <output wsam:Action="http://WS/ServidorWeb/getDatarLoginResponse" message="tns:getDatarLoginResponse" />
-    </operation>
-    <operation name="buscarProveedor">
-      <input wsam:Action="http://WS/ServidorWeb/buscarProveedorRequest" message="tns:buscarProveedor" />
-      <output wsam:Action="http://WS/ServidorWeb/buscarProveedorResponse" message="tns:buscarProveedorResponse" />
-    </operation>
-    <operation name="getDatarProducto">
-      <input wsam:Action="http://WS/ServidorWeb/getDatarProductoRequest" message="tns:getDatarProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/getDatarProductoResponse" message="tns:getDatarProductoResponse" />
+    <operation name="buscarUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/buscarUsuarioRequest" message="tns:buscarUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/buscarUsuarioResponse" message="tns:buscarUsuarioResponse" />
     </operation>
     <operation name="bajaUsuario">
       <input wsam:Action="http://WS/ServidorWeb/bajaUsuarioRequest" message="tns:bajaUsuario" />
       <output wsam:Action="http://WS/ServidorWeb/bajaUsuarioResponse" message="tns:bajaUsuarioResponse" />
     </operation>
-    <operation name="bajaProducto">
-      <input wsam:Action="http://WS/ServidorWeb/bajaProductoRequest" message="tns:bajaProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/bajaProductoResponse" message="tns:bajaProductoResponse" />
+    <operation name="buscarProducto">
+      <input wsam:Action="http://WS/ServidorWeb/buscarProductoRequest" message="tns:buscarProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/buscarProductoResponse" message="tns:buscarProductoResponse" />
     </operation>
     <operation name="cargarProducto">
       <input wsam:Action="http://WS/ServidorWeb/cargarProductoRequest" message="tns:cargarProducto" />
       <output wsam:Action="http://WS/ServidorWeb/cargarProductoResponse" message="tns:cargarProductoResponse" />
     </operation>
+    <operation name="cargarCatMedida">
+      <input wsam:Action="http://WS/ServidorWeb/cargarCatMedidaRequest" message="tns:cargarCatMedida" />
+      <output wsam:Action="http://WS/ServidorWeb/cargarCatMedidaResponse" message="tns:cargarCatMedidaResponse" />
+    </operation>
     <operation name="getDataUsuarios">
       <input wsam:Action="http://WS/ServidorWeb/getDataUsuariosRequest" message="tns:getDataUsuarios" />
       <output wsam:Action="http://WS/ServidorWeb/getDataUsuariosResponse" message="tns:getDataUsuariosResponse" />
-    </operation>
-    <operation name="altaProducto">
-      <input wsam:Action="http://WS/ServidorWeb/altaProductoRequest" message="tns:altaProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/altaProductoResponse" message="tns:altaProductoResponse" />
-    </operation>
-    <operation name="getDataProducto">
-      <input wsam:Action="http://WS/ServidorWeb/getDataProductoRequest" message="tns:getDataProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/getDataProductoResponse" message="tns:getDataProductoResponse" />
-    </operation>
-    <operation name="buscarLogin">
-      <input wsam:Action="http://WS/ServidorWeb/buscarLoginRequest" message="tns:buscarLogin" />
-      <output wsam:Action="http://WS/ServidorWeb/buscarLoginResponse" message="tns:buscarLoginResponse" />
     </operation>
     <operation name="getDatarUsuarios">
       <input wsam:Action="http://WS/ServidorWeb/getDatarUsuariosRequest" message="tns:getDatarUsuarios" />
       <output wsam:Action="http://WS/ServidorWeb/getDatarUsuariosResponse" message="tns:getDatarUsuariosResponse" />
     </operation>
-    <operation name="buscarUsuario">
-      <input wsam:Action="http://WS/ServidorWeb/buscarUsuarioRequest" message="tns:buscarUsuario" />
-      <output wsam:Action="http://WS/ServidorWeb/buscarUsuarioResponse" message="tns:buscarUsuarioResponse" />
+    <operation name="getDatarProducto">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarProductoRequest" message="tns:getDatarProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarProductoResponse" message="tns:getDatarProductoResponse" />
     </operation>
-    <operation name="buscarProducto">
-      <input wsam:Action="http://WS/ServidorWeb/buscarProductoRequest" message="tns:buscarProducto" />
-      <output wsam:Action="http://WS/ServidorWeb/buscarProductoResponse" message="tns:buscarProductoResponse" />
+    <operation name="altaProducto">
+      <input wsam:Action="http://WS/ServidorWeb/altaProductoRequest" message="tns:altaProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/altaProductoResponse" message="tns:altaProductoResponse" />
+    </operation>
+    <operation name="bajaProducto">
+      <input wsam:Action="http://WS/ServidorWeb/bajaProductoRequest" message="tns:bajaProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/bajaProductoResponse" message="tns:bajaProductoResponse" />
+    </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+    </operation>
+    <operation name="getDatarLogin">
+      <input wsam:Action="http://WS/ServidorWeb/getDatarLoginRequest" message="tns:getDatarLogin" />
+      <output wsam:Action="http://WS/ServidorWeb/getDatarLoginResponse" message="tns:getDatarLoginResponse" />
+    </operation>
+    <operation name="getDataProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/getDataProveedorRequest" message="tns:getDataProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/getDataProveedorResponse" message="tns:getDataProveedorResponse" />
+    </operation>
+    <operation name="altaUsuario">
+      <input wsam:Action="http://WS/ServidorWeb/altaUsuarioRequest" message="tns:altaUsuario" />
+      <output wsam:Action="http://WS/ServidorWeb/altaUsuarioResponse" message="tns:altaUsuarioResponse" />
+    </operation>
+    <operation name="getDataProducto">
+      <input wsam:Action="http://WS/ServidorWeb/getDataProductoRequest" message="tns:getDataProducto" />
+      <output wsam:Action="http://WS/ServidorWeb/getDataProductoResponse" message="tns:getDataProductoResponse" />
+    </operation>
+    <operation name="buscarProveedor">
+      <input wsam:Action="http://WS/ServidorWeb/buscarProveedorRequest" message="tns:buscarProveedor" />
+      <output wsam:Action="http://WS/ServidorWeb/buscarProveedorResponse" message="tns:buscarProveedorResponse" />
+    </operation>
+    <operation name="buscarLogin">
+      <input wsam:Action="http://WS/ServidorWeb/buscarLoginRequest" message="tns:buscarLogin" />
+      <output wsam:Action="http://WS/ServidorWeb/buscarLoginResponse" message="tns:buscarLoginResponse" />
     </operation>
   </portType>
   <binding name="ServidorWebPortBinding" type="tns:ServidorWeb">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="altaUsuario">
+    <operation name="cargarCatDepartamento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -278,61 +338,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="cargarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getDatarProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="bajaProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getBuscarUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getBuscarProducto">
+    <operation name="cargarCatProveedor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -350,6 +356,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="altaProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="bajaProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="actualizarProveedor">
       <soap:operation soapAction="" />
       <input>
@@ -359,7 +383,70 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="altaProveedor">
+    <operation name="actualizarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarCatDepartamento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBuscarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBuscarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarCatMedida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarCatProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cargarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -377,34 +464,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="getDataProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getDatarLogin">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="buscarProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getDatarProducto">
+    <operation name="buscarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -422,7 +482,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="bajaProducto">
+    <operation name="buscarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -440,34 +500,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="cargarCatMedida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="getDataUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="altaProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="getDataProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="buscarLogin">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -485,7 +527,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="buscarUsuario">
+    <operation name="getDatarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -494,7 +536,79 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="buscarProducto">
+    <operation name="altaProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="bajaProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDatarLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDataProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="altaUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDataProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarLogin">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

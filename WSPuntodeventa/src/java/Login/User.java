@@ -12,10 +12,12 @@ package Login;
 public class User {
     private int idUsuario;
     private String password;
+    private int permiso;
     
-    public User(int idUsuario, String password){
+    public User(int idUsuario, String password, int permiso){
         this.idUsuario = idUsuario;
         this.password = password;
+        this.permiso = permiso;
     }
     
     public int getidUsuario() {
@@ -32,5 +34,13 @@ public class User {
 
     public void setpassword(String password) {
         this.password = password;
+    }
+    
+    public int getpermiso() {
+        return permiso;
+    }
+
+    public void setpermiso(int permiso) {
+        this.permiso = permiso;
     }
 }

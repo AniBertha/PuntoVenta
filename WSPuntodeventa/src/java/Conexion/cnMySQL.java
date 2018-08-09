@@ -15,9 +15,10 @@ public class cnMySQL {
     static cnMySQL instance = null;
     public cnMySQL() throws Exception
     {
+        
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/puntoventa","root","root");
-    
+        
     }
     public static cnMySQL getInstance() throws Exception
     {

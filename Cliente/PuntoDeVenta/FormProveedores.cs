@@ -71,11 +71,11 @@ namespace PuntoDeVenta
             {
                 Proveedor json = new Proveedor();
                 //json.IDProveedor = Convert.ToInt16(txtID.Text);
-                json.RazonSocial = txtRazonSocial.Text;
-                json.DomicilioFiscal = txtDomicilioFiscal.Text;
-                json.RFC = txtRFC.Text;
-                json.Telefono = txtTelefono.Text;
-                json.Correo = txtCorreo.Text;
+                json.razonSocial = txtRazonSocial.Text;
+                json.domicilioFiscal = txtDomicilioFiscal.Text;
+                json.rfc = txtRFC.Text;
+                json.telefono = txtTelefono.Text;
+                json.correo = txtCorreo.Text;
                 data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
                 data2 += data;
                 //txtID.Text = data2;
@@ -108,11 +108,11 @@ namespace PuntoDeVenta
             {
                 Proveedor json = new Proveedor();
                 //json.IDProveedor = Convert.ToInt16(txtID.Text);
-                json.RazonSocial = txtRazonSocial.Text;
-                json.DomicilioFiscal = txtDomicilioFiscal.Text;
-                json.RFC = txtRFC.Text;
-                json.Telefono = txtTelefono.Text;
-                json.Correo = txtCorreo.Text;
+                json.razonSocial = txtRazonSocial.Text;
+                json.domicilioFiscal = txtDomicilioFiscal.Text;
+                json.rfc = txtRFC.Text;
+                json.telefono = txtTelefono.Text;
+                json.correo = txtCorreo.Text;
                 data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented) + "]";
                 data2 += data;
 
@@ -140,7 +140,7 @@ namespace PuntoDeVenta
             if(MessageBox.Show("¿Está seguro de eliminar este elemento? Esta acción no se puede deshacer.", "Eliminar proveedor", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 Proveedor json = new Proveedor();
-                json.IDProveedor = Convert.ToInt16(txtID.Text);
+                json.idProvedor = Convert.ToInt16(txtID.Text);
                 data = JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented);
                 data2 += data;
                 data2 += "]";

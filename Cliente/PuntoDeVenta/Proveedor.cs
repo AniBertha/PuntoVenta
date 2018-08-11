@@ -7,11 +7,11 @@ namespace PuntoDeVenta
 {
     class Proveedor
     {
-        public int IDProveedor { get; set; }
-        public string RazonSocial { get; set; }
-        public string DomicilioFiscal { get; set; }
-        public string RFC { get; set; }
-        public string Telefono { get; set; }
-        public string Correo { get; set; }
+        public int idProvedor { get; set; }
+        public string razonSocial { get; set; }
+        public string domicilioFiscal { get; set; }
+        public string rfc { get; set; }
+        public string telefono { get; set; }
+        public string correo { get; set; }
     }
 }
